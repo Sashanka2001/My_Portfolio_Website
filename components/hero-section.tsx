@@ -53,41 +53,7 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
                 VIEW PROJECTS
               </Button>
             </div>
-
-            {/* Social Links with pop-up effect */}
-            <div className="flex justify-start gap-6 mt-6">
-              <a
-                href="https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white hover:text-blue-400 transform transition-transform duration-300 hover:scale-110"
-              >
-                <Linkedin size={24} />
-                <span>LinkedIn</span>
-              </a>
-
-              <a
-                href="https://github.com/IT23231528chamudi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white hover:text-blue-400 transform transition-transform duration-300 hover:scale-110"
-              >
-                <Github size={24} />
-                <span>GitHub (Work)</span>
-              </a>
-              
-              <a
-                href="https://github.com/Sashanka2001"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white hover:text-blue-400 transform transition-transform duration-300 hover:scale-110"
-              >
-                <Github size={24} />
-                <span>GitHub (Personal)</span>
-              </a>
-            </div>
           </div>
-
           {/* Right Column (optional) */}
           <div className="text-white space-y-6 lg:text-right">
             {/* Optional content here */}

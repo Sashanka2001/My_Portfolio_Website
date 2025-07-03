@@ -1,11 +1,11 @@
-"use client"
+ "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Github, ExternalLink, Eye } from "lucide-react"
 import { useState } from "react"
- 
+import Link from "next/link"
 
 interface Project {
   id: number
@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const [showDetails, setShowDetails] = useState(false)
 
   return (
-    <Card className="transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+    <Card className="transform transition-transform duration-300 hover:scale-105 hover:shadow-xl group">
       <div className="relative overflow-hidden">
         <img
           src={project.image || "/placeholder.svg"}
@@ -46,7 +46,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </Button>
         </div>
       </div>
-
       <CardHeader>
         <div className="flex justify-between items-start">
           <CardTitle className="text-xl text-slate-800">{project.title}</CardTitle>
@@ -56,7 +55,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <CardDescription>{showDetails ? project.longDescription : project.description}</CardDescription>
       </CardHeader>
-
       <CardContent>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech) => (
@@ -65,16 +63,45 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </Badge>
           ))}
         </div>
-
         <div className="flex gap-3">
-          <Button size="sm" variant="outline" className="flex items-center gap-2 flex-1 bg-transparent">
-            <Github size={16} />
-            Code
-          </Button>
-          <Button size="sm" className="flex items-center gap-2 flex-1 bg-teal-600 hover:bg-teal-700">
-            <ExternalLink size={16} />
-            Demo
-          </Button>
+          {/* GitHub Link */}
+          {project.github && project.github !== "#" ? (
+            <Button size="sm" variant="outline" className="flex items-center gap-2 flex-1 bg-transparent" asChild>
+              <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                <Github size={16} />
+                Code
+              </Link>
+            </Button>
+          ) : (
+            <Button
+              size="sm"
+              variant="outline"
+              className="flex items-center gap-2 flex-1 bg-transparent opacity-50"
+              disabled
+            >
+              <Github size={16} />
+              Code
+            </Button>
+          )}
+
+          {/* Demo Link */}
+          {project.demo && project.demo !== "#" ? (
+            <Button size="sm" className="flex items-center gap-2 flex-1 bg-teal-600 hover:bg-teal-700" asChild>
+              <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                <ExternalLink size={16} />
+                Demo
+              </Link>
+            </Button>
+          ) : (
+            <Button
+              size="sm"
+              className="flex items-center gap-2 flex-1 bg-teal-600 hover:bg-teal-700 opacity-50"
+              disabled
+            >
+              <ExternalLink size={16} />
+              Demo
+            </Button>
+          )}
         </div>
       </CardContent>
     </Card>

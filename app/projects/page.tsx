@@ -1,4 +1,4 @@
-"use client"
+ "use client"
 
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
@@ -41,8 +41,9 @@ export default function ProjectsPage() {
       description: "Collaborative project management tool with real-time updates.",
       longDescription:
         "Team collaboration platform with project boards, task assignment, real-time notifications, and progress tracking. Built with modern web technologies.",
-      technologies: ["Typescript","Postgresql","SpringBoot"],
-      github: "#",
+      technologies: ["Typescript", "Postgresql", "SpringBoot"],
+      github:
+        "https://github.com/SLIIT-FacultyOfComputing/se-group-project-group_12_nemra-apartment_management_system.git",
       demo: "#",
       image: "/nemra.png?height=300&width=500",
       category: "Full Stack",
@@ -53,7 +54,7 @@ export default function ProjectsPage() {
       description: "Modern e-commerce solution with payment integration and inventory management.",
       longDescription:
         "Complete e-commerce platform with user authentication, product catalog, shopping cart, payment processing, and order tracking. Admin dashboard for inventory and order management.",
-      technologies: ["React","SpringBoot","SQL"],
+      technologies: ["React", "SpringBoot", "SQL"],
       github: "https://github.com/IT23231528chamudi/OOAD-Group-12-Frontend.git",
       demo: "#",
       image: "/SplendourLux.png?height=300&width=500",
@@ -61,24 +62,24 @@ export default function ProjectsPage() {
     },
     {
       id: 4,
-      title: "DSL and HTML Form Generator 💻 ",
+      title: "DSL and HTML Form Generator 💻",
       description: "Interactive weather application with location-based forecasts.",
       longDescription:
         "Weather dashboard with current conditions, 7-day forecast, interactive maps, and location search. Responsive design with data visualization.",
       technologies: ["LEX & YACC", "BNF/EBNF", "HTML", "CSS", "JavaScript"],
       github: "https://github.com/IT23231528chamudi/Building-a-DSL-and-HTML-Form-Generator-with-Lex-and-Yacc-.git",
-      demo: "#",
+      demo: "https://youtu.be/Fatk3f0UGS8",
       image: "/lex.png?height=300&width=500",
       category: "Frontend",
     },
     {
       id: 5,
-      title: "Portfolio Website 👨‍💻",
+      title: "Portfolio Website 👩🏻",
       description: "Personal portfolio showcasing projects and skills.",
       longDescription:
         "Responsive portfolio website built with Next.js and Tailwind CSS. Features smooth animations, dark mode, and optimized performance.",
       technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-      github: "#",
+      github: "https://github.com/Sashanka2001/My_Portfolio_Website.git",
       demo: "#",
       image: "/pp.png?height=300&width=500",
       category: "Frontend",
@@ -86,21 +87,21 @@ export default function ProjectsPage() {
     {
       id: 6,
       title: "Fully Functional Calculator 🧮",
-      description: "Real-time messaging app with group chat functionality.",
+      description: "A fully functional calculator with basic arithmetic operations.",
       longDescription:
-        "Real-time chat application with private messaging, group chats, file sharing, and emoji support. Built with Socket.io for real-time communication.",
-      technologies: ["HTML","JavaScript","CSS"],
+        "Simple yet effective calculator built with HTML, CSS, and JavaScript. Features include basic arithmetic operations, clear functionality, and responsive design.",
+      technologies: ["HTML", "JavaScript", "CSS"],
       github: "https://github.com/Sashanka2001/Task_2_CA-D1-3951.git",
       demo: "https://www.linkedin.com/feed/update/urn:li:activity:7288282943976808448/",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/cal.png?height=300&width=500",
       category: "Frontend",
     },
     {
       id: 7,
       title: "Dice Game - YAHTZEE 🎲",
-      description: "Real-time messaging app with group chat functionality.",
+      description: "Two-player Yahtzee game implemented in C programming language.",
       longDescription:
-        "Real-time chat application with private messaging, group chats, file sharing, and emoji support. Built with Socket.io for real-time communication.",
+        "Classic Yahtzee dice game for two players built in C. Features include dice rolling, scoring system, turn management, and winner determination.",
       technologies: ["C Language"],
       github: "https://github.com/IT23231528chamudi/Two-Player-Yahtzee-Game-in-C.git",
       demo: "#",
@@ -110,9 +111,9 @@ export default function ProjectsPage() {
     {
       id: 8,
       title: "Dynamic Tic Tac Toe Game 🕹️",
-      description: "Real-time messaging app with group chat functionality.",
+      description: "Interactive Tic Tac Toe game with dynamic board size.",
       longDescription:
-        "Real-time chat application with private messaging, group chats, file sharing, and emoji support. Built with Socket.io for real-time communication.",
+        "Enhanced Tic Tac Toe game built in C with customizable board sizes and intelligent game logic. Features include player vs player mode and win detection.",
       technologies: ["C Language"],
       github: "https://github.com/IT23231528chamudi/Tic-Tac-Toc-Game-using-C.git",
       demo: "#",
@@ -122,10 +123,10 @@ export default function ProjectsPage() {
     {
       id: 9,
       title: "Smart IoT Food Monitoring System 🥬",
-      description: "Real-time messaging app with group chat functionality.",
+      description: "IoT-based system for monitoring food freshness and storage conditions.",
       longDescription:
-        "Real-time chat application with private messaging, group chats, file sharing, and emoji support. Built with Socket.io for real-time communication.",
-      technologies: ["Arduini", "Firebase", "HTML","CSS","Javascript"],
+        "Smart monitoring system using Arduino sensors to track temperature, humidity, and other factors affecting food quality. Includes web dashboard for real-time monitoring.",
+      technologies: ["Arduino", "Firebase", "HTML", "CSS", "Javascript"],
       github: "https://github.com/IT23231528chamudi/The-Smart-IoT-Food-Monitoring-System-master.git",
       demo: "#",
       image: "/placeholder.svg?height=300&width=500",
@@ -134,21 +135,18 @@ export default function ProjectsPage() {
     {
       id: 10,
       title: "Design and Functionality of the Web Page 🎨",
-      description: "Real-time messaging app with group chat functionality.",
+      description: "Modern web page design with interactive functionality.",
       longDescription:
-        "Real-time chat application with private messaging, group chats, file sharing, and emoji support. Built with Socket.io for real-time communication.",
-      technologies: ["HTML","CSS","Javascript"],
+        "Responsive web page showcasing modern design principles with interactive elements, smooth animations, and user-friendly interface built with vanilla web technologies.",
+      technologies: ["HTML", "CSS", "Javascript"],
       github: "https://github.com/Sashanka2001/Design-and-Functionality-of-the-Web-Page-Task-1-.git",
       demo: "#",
       image: "/placeholder.svg?height=300&width=500",
       category: "Web App",
     },
-
-
-    
   ]
 
-  const categories = ["All", "Full Stack", "Frontend", "Web App","Games"]
+  const categories = ["All", "Full Stack", "Frontend", "Web App", "Games"]
   const [selectedCategory, setSelectedCategory] = useState("All")
 
   const filteredProjects =
@@ -165,7 +163,7 @@ export default function ProjectsPage() {
 
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-4">My Projects</h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               A collection of projects I've worked on, showcasing my skills in web development, full-stack applications,

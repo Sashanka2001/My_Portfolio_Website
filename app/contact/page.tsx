@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
-import { Mail, Phone, MapPin, Github, Linkedin, Send, MessageCircle } from "lucide-react"
+import { Mail, MapPin,Send, MessageCircle } from "lucide-react"
 
 export default function ContactPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -47,44 +47,25 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      value: "sashanka.rathnayaka@example.com",
-      link: "mailto:sashanka.rathnayaka@example.com",
+      title: "Email (Pesonal)",
+      value: "sashankarathnayaka01@gmail.com",
+      link: "sashankarathnayaka01@gmail.com",
     },
     {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Phone",
-      value: "+94 XX XXX XXXX",
-      link: "tel:+94XXXXXXXX",
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email (Work)",
+      value: "it23231528@my.sliit.lk",
+      link: "it23231528@my.sliit.lk",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Location",
-      value: "Sri Lanka",
+      value: "Sri Lanka - Colombo",
       link: "#",
     },
   ]
 
-  const socialLinks = [
-    {
-      icon: <Linkedin className="w-6 h-6" />,
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/",
-      color: "text-blue-600 hover:text-blue-700",
-    },
-    {
-      icon: <Github className="w-6 h-6" />,
-      name: "GitHub",
-      url: "https://github.com/Sashanka2001",
-      color: "text-gray-800 hover:text-gray-900",
-    },
-    {
-      icon: <MessageCircle className="w-6 h-6" />,
-      name: "WhatsApp",
-      url: "#",
-      color: "text-green-600 hover:text-green-700",
-    },
-  ]
+   
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
@@ -106,84 +87,22 @@ export default function ContactPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-2xl text-slate-800 flex items-center gap-2">
-                  <Send className="w-6 h-6 text-teal-600" />
-                  Send Me a Message
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                        Full Name
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your full name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                        Email Address
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your.email@example.com"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                      Subject
-                    </label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      type="text"
-                      required
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="What's this about?"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={6}
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell me about your project or opportunity..."
-                    />
-                  </div>
-                  <Button type="submit" size="lg" className="w-full bg-teal-600 hover:bg-teal-700">
-                    <Send className="w-4 h-4 mr-2" />
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+             
+             {/* Contact Image */}
+            <div className="flex items-center justify-center">
+              <div className="relative w-full max-w-md">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl blur-xl opacity-50"></div>
+                <img
+                  src="https://pagedone.io/asset/uploads/1696245837.png"
+                  alt="Contact illustration"
+                  className="relative w-full h-auto rounded-2xl shadow-lg border border-slate-200/50"
+                />
+              </div>
+            </div>
 
             {/* Contact Information */}
             <div className="space-y-8">
+
               {/* Contact Details */}
               <Card className="shadow-lg">
                 <CardHeader>
@@ -206,46 +125,21 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              {/* Social Links */}
+               {/* Availability */}
               <Card className="shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-slate-800">Connect With Me</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 gap-4">
-                    {socialLinks.map((social, index) => (
-                      <a
-                        key={index}
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`flex items-center gap-4 p-4 rounded-lg border border-slate-200 hover:border-slate-300 transition-colors ${social.color}`}
-                      >
-                        <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center">
-                          {social.icon}
-                        </div>
-                        <span className="font-medium">{social.name}</span>
-                      </a>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Availability */}
-              <Card className="shadow-lg bg-teal-50 border-teal-200">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-teal-800 mb-2">Currently Available</h3>
-                  <p className="text-teal-700 mb-4">
+                  <h3 className="text-xl font-bold text-slate-800 mb-2">Currently Available</h3>
+                  <p className="text-slate-600 mb-4">
                     I'm actively seeking internship opportunities and freelance projects. Let's discuss how I can
                     contribute to your team!
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-teal-200 text-teal-800 rounded-full text-sm">Internships</span>
-                    <span className="px-3 py-1 bg-teal-200 text-teal-800 rounded-full text-sm">Freelance</span>
-                    <span className="px-3 py-1 bg-teal-200 text-teal-800 rounded-full text-sm">Collaborations</span>
+                    <span className="px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm">Internships</span>
+                    <span className="px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm">Collaborations</span>
                   </div>
                 </CardContent>
               </Card>
+
             </div>
           </div>
         </div>
