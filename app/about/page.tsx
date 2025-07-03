@@ -191,7 +191,7 @@ export default function AboutPage() {
                 <p className="text-slate-600 text-center mb-4">Computer Science Student</p>
                 <div className="space-y-2 text-sm text-slate-600">
                   <p>
-                    <strong>Location:</strong> Sri Lanka - Colombo
+                    <strong>Location:</strong> Sri Lanka
                   </p>
                   <p>
                     <strong>Education:</strong> BSc (Hons) in Computer Science
@@ -249,32 +249,38 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Skills Overview */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-slate-800 mb-6">Core Competencies</h3>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <Code className="w-8 h-8 mx-auto mb-2 text-blue-600" />
-                    <h4 className="font-semibold text-slate-800">Frontend</h4>
-                    <p className="text-sm text-slate-600">React,TypeScript</p>
+              {/* Enhanced Skills Overview */}
+              <Card className="shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <Code className="w-6 h-6 text-blue-600" />
+                    Core Competencies
+                  </h3>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="text-center p-4 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
+                      <Code className="w-8 h-8 mx-auto mb-2 text-blue-600" />
+                      <h4 className="font-semibold text-slate-800 mb-1">Frontend</h4>
+                      <p className="text-sm text-slate-600">React, TypeScript</p>
+                    </div>
+                    <div className="text-center p-4 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
+                      <Database className="w-8 h-8 mx-auto mb-2 text-green-600" />
+                      <h4 className="font-semibold text-slate-800 mb-1">Backend</h4>
+                      <p className="text-sm text-slate-600">Node.js, APIs</p>
+                    </div>
+                    <div className="text-center p-4 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors">
+                      <Globe className="w-8 h-8 mx-auto mb-2 text-purple-600" />
+                      <h4 className="font-semibold text-slate-800 mb-1">Database</h4>
+                      <p className="text-sm text-slate-600">MySQL, PostgreSQL</p>
+                    </div>
+                    <div className="text-center p-4 rounded-lg bg-orange-50 hover:bg-orange-100 transition-colors">
+                      <Smartphone className="w-8 h-8 mx-auto mb-2 text-orange-600" />
+                      <h4 className="font-semibold text-slate-800 mb-1">Programming Languages</h4>
+                      <p className="text-sm text-slate-600">Python, Java, C</p>
+                    </div>
                   </div>
-                  <div className="text-center">
-                    <Database className="w-8 h-8 mx-auto mb-2 text-green-600" />
-                    <h4 className="font-semibold text-slate-800">Backend</h4>
-                    <p className="text-sm text-slate-600">Node.js,APIs</p>
-                  </div>
-                  <div className="text-center">
-                    <Globe className="w-8 h-8 mx-auto mb-2 text-purple-600" />
-                    <h4 className="font-semibold text-slate-800">Database</h4>
-                    <p className="text-sm text-slate-600">MySQL, PostgreSQL</p>
-                  </div>
-                  <div className="text-center">
-                    <Smartphone className="w-8 h-8 mx-auto mb-2 text-orange-600" />
-                    <h4 className="font-semibold text-slate-800">Programming Languages</h4>
-                    <p className="text-sm text-slate-600">Python, Java, C</p>
-                  </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
+              
             </div>
           </div>
 

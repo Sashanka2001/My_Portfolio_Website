@@ -1,15 +1,11 @@
-"use client"
+ "use client"
 
 import type React from "react"
-
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { Card, CardContent } from "@/components/ui/card"
 import { useState } from "react"
-import { Mail, MapPin,Send, MessageCircle } from "lucide-react"
+import { Mail, MapPin, User } from "lucide-react"
 
 export default function ContactPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -38,34 +34,36 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
     console.log("Form submitted:", formData)
-    // Reset form
     setFormData({ name: "", email: "", subject: "", message: "" })
   }
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email (Pesonal)",
+      id: 1,
+      icon: Mail,
+      title: "Email (Personal)",
       value: "sashankarathnayaka01@gmail.com",
-      link: "sashankarathnayaka01@gmail.com",
+      link: "mailto:sashankarathnayaka01@gmail.com",
+      color: "bg-blue-100 text-blue-600",
     },
     {
-      icon: <Mail className="w-6 h-6" />,
+      id: 2,
+      icon: Mail,
       title: "Email (Work)",
       value: "it23231528@my.sliit.lk",
-      link: "it23231528@my.sliit.lk",
+      link: "mailto:it23231528@my.sliit.lk",
+      color: "bg-green-100 text-green-600",
     },
     {
-      icon: <MapPin className="w-6 h-6" />,
+      id: 3,
+      icon: MapPin,
       title: "Location",
-      value: "Sri Lanka - Colombo",
-      link: "#",
+      value: "R.M.H.B.Rathnayaka, wawaegedara, pothuhera",
+      link: "R.M.H.B.Rathnayaka, wawaegedara, pothuhera",
+      color: "bg-purple-100 text-purple-600",
     },
   ]
-
-   
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
@@ -75,7 +73,6 @@ export default function ContactPage() {
         setIsMenuOpen={setIsMenuOpen}
         scrollToSection={scrollToSection}
       />
-
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -87,64 +84,86 @@ export default function ContactPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-             
-             {/* Contact Image */}
+            {/* Contact Image */}
             <div className="flex items-center justify-center">
               <div className="relative w-full max-w-md">
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl blur-xl opacity-50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-blue-200 rounded-2xl blur-xl opacity-50"></div>
                 <img
                   src="https://pagedone.io/asset/uploads/1696245837.png"
                   alt="Contact illustration"
                   className="relative w-full h-auto rounded-2xl shadow-lg border border-slate-200/50"
+                  style={{
+                    filter: "hue-rotate(210deg) saturate(0.8) brightness(1.1)",
+                  }}
                 />
               </div>
             </div>
 
             {/* Contact Information */}
             <div className="space-y-8">
+              {/* Contact Details - Certificate Style */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl">
+                <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Contact Information</h3>
+                <div className="grid gap-4">
+                  {contactInfo.map((info) => {
+                    const IconComponent = info.icon
+                    return (
+                      <Card key={info.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <CardContent className="p-4">
+                          <div className="flex items-center gap-4">
+                            <div className={`w-12 h-12 rounded-full flex items-center justify-center ${info.color}`}>
+                              <IconComponent className="w-6 h-6" />
+                            </div>
+                            <div className="flex-1">
+                              <h4 className="font-semibold text-slate-800 text-sm">{info.title}</h4>
+                              <a
+                                href={info.link}
+                                className="text-slate-600 hover:text-teal-600 transition-colors text-xs"
+                              >
+                                {info.value}
+                              </a>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )
+                  })}
+                </div>
+              </div>
 
-              {/* Contact Details */}
-              <Card className="shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-slate-800">Contact Information</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600">
-                        {info.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-slate-800">{info.title}</h3>
-                        <a href={info.link} className="text-slate-600 hover:text-teal-600 transition-colors">
-                          {info.value}
-                        </a>
-                      </div>
+              {/* Availability - Certificate Style */}
+              <Card className="shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
+                      <User className="w-6 h-6 text-teal-600" />
                     </div>
-                  ))}
-                </CardContent>
-              </Card>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-slate-800 mb-2">Currently Available</h3>
+                      <p className="text-slate-600 mb-4">
+                        I'm actively seeking internship opportunities and freelance projects. Let's discuss how I can
+                        contribute to your team!
+                      </p>
+                    </div>
+                  </div>
 
-               {/* Availability */}
-              <Card className="shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-slate-800 mb-2">Currently Available</h3>
-                  <p className="text-slate-600 mb-4">
-                    I'm actively seeking internship opportunities and freelance projects. Let's discuss how I can
-                    contribute to your team!
-                  </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm">Internships</span>
-                    <span className="px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm">Collaborations</span>
+                    <span className="px-3 py-1 bg-teal-50 text-teal-600 rounded-full text-sm border border-teal-200">
+                      Internships
+                    </span>
+                    <span className="px-3 py-1 bg-teal-50 text-teal-600 rounded-full text-sm border border-teal-200">
+                      Collaborations
+                    </span>
+                    <span className="px-3 py-1 bg-teal-50 text-teal-600 rounded-full text-sm border border-teal-200">
+                      Freelance Projects
+                    </span>
                   </div>
                 </CardContent>
               </Card>
-
             </div>
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   )

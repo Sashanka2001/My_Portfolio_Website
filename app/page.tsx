@@ -11,6 +11,7 @@ import EducationSection from "@/components/education-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
 
+
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
