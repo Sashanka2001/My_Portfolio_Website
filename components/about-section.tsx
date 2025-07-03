@@ -58,7 +58,7 @@ export default function AboutSection() {
                     <User className="w-6 h-6 text-cyan-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-slate-800 mb-2">Hello! I'm Sashanka</h3>
+                    <h3 className="text-2xl font-bold text-slate-800 mb-2">Hello I'm Sashanka</h3>
                     <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4"></div>
                   </div>
                 </div>
