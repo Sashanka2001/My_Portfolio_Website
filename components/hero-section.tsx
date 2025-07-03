@@ -19,7 +19,7 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
           className="w-full h-full absolute inset-0 bg-no-repeat bg-top opacity-30"
           style={{
             backgroundImage: "url('/2.jpg')",
-            backgroundSize: "59%",
+            backgroundSize: "55%",
             backgroundPosition: "top right",
           }}
         ></div>
