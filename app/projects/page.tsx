@@ -97,7 +97,7 @@ export default function ProjectsPage() {
     {
       id: 6,
       title: "SplendourLux (An Online Shopping Site) 🛍️",
-      description: "Modern e-commerce solution with payment integration and inventory management.",
+      description: "Developed a modern e-commerce solution with secure payment integration and dynamic inventory management as part of a team collaboration",
       longDescription:
         "Complete e-commerce platform with user authentication, product catalog, shopping cart, payment processing, and order tracking. Admin dashboard for inventory and order management.",
       technologies: ["React", "SpringBoot", "SQL"],
@@ -149,7 +149,7 @@ export default function ProjectsPage() {
     {
       id: 10,
       title: "Smart IoT Food Monitoring System 🥬",
-      description: "IoT-based system for monitoring food freshness and storage conditions.",
+      description: "An IoT-based system for monitoring food freshness and storage conditions, designed and implemented collaboratively.",
       longDescription:
         "Smart monitoring system using Arduino sensors to track temperature, humidity, and other factors affecting food quality. Includes web dashboard for real-time monitoring.",
       technologies: ["Arduino", "Firebase", "HTML", "CSS", "Javascript"],
