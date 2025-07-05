@@ -63,7 +63,7 @@ export default function ProjectsPage() {
       technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
       github: "https://github.com/Sashanka2001/My_Portfolio_Website.git",
       demo: "#",
-      image: "/pp.png?height=300&width=500",
+      image: "/pf.png?height=300&width=500",
       category: "Frontend",
       year: "2025",
     },
