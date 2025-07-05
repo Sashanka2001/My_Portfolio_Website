@@ -26,8 +26,62 @@ export default function ProjectsPage() {
   }
 
   const projects = [
+   
     {
       id: 1,
+      title: "NEMRA Smart Apartment 🏙️",
+      description: "Collaborative apartment management system with real-time updates.",
+      longDescription:
+        "Team collaboration platform with project boards, task assignment, real-time notifications, and progress tracking. Built with modern web technologies.",
+      technologies: ["TypeScript", "PostgreSQL", "SpringBoot"],
+      github:
+        "https://github.com/SLIIT-FacultyOfComputing/se-group-project-group_12_nemra-apartment_management_system.git",
+      demo: "https://youtu.be/MuT70hK8rsE",
+      image: "/nemra.png?height=300&width=500",
+      category: "Full Stack",
+      year: "2025",
+    },
+    {
+      id: 2,
+      title: "DSL and HTML Form Generator 💻",
+      description: "Domain-specific language for generating HTML forms with custom syntax.",
+      longDescription:
+        "Custom DSL built with Lex and Yacc for generating HTML forms. Features include BNF/EBNF grammar definition, lexical analysis, and automatic form generation with styling.",
+      technologies: ["LEX & YACC", "BNF/EBNF", "HTML", "CSS", "JavaScript"],
+      github: "https://github.com/IT23231528chamudi/Building-a-DSL-and-HTML-Form-Generator-with-Lex-and-Yacc-.git",
+      demo: "https://youtu.be/Fatk3f0UGS8",
+      image: "/lex.png?height=300&width=500",
+      category: "Frontend",
+      year: "2025",
+    },
+    {
+      id: 3,
+      title: "Portfolio Website 👩🏻",
+      description: "Personal portfolio showcasing projects and skills.",
+      longDescription:
+        "Responsive portfolio website built with Next.js and Tailwind CSS. Features smooth animations, dark mode, and optimized performance.",
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+      github: "https://github.com/Sashanka2001/My_Portfolio_Website.git",
+      demo: "#",
+      image: "/pp.png?height=300&width=500",
+      category: "Frontend",
+      year: "2025",
+    },
+    {
+      id: 4,
+      title: "Fully Functional Calculator 🧮",
+      description: "A fully functional calculator with basic arithmetic operations.",
+      longDescription:
+        "Simple yet effective calculator built with HTML, CSS, and JavaScript. Features include basic arithmetic operations, clear functionality, and responsive design.",
+      technologies: ["HTML", "JavaScript", "CSS"],
+      github: "https://github.com/Sashanka2001/Task_2_CA-D1-3951.git",
+      demo: "https://www.linkedin.com/feed/update/urn:li:activity:7288282943976808448/",
+      image: "/cal.png?height=300&width=500",
+      category: "Frontend",
+      year: "2025",
+    },
+     {
+      id: 5,
       title: "Cozy Cup Coffee Shop 🧋",
       description:
         "A full-stack web application for a coffee shop with online ordering, user authentication, and payment integration.",
@@ -41,70 +95,17 @@ export default function ProjectsPage() {
       year: "2024",
     },
     {
-      id: 2,
-      title: "NEMRA Smart Apartment 🏙️",
-      description: "Collaborative apartment management system with real-time updates.",
-      longDescription:
-        "Team collaboration platform with project boards, task assignment, real-time notifications, and progress tracking. Built with modern web technologies.",
-      technologies: ["TypeScript", "PostgreSQL", "SpringBoot"],
-      github:
-        "https://github.com/SLIIT-FacultyOfComputing/se-group-project-group_12_nemra-apartment_management_system.git",
-      demo: "#",
-      image: "/nemra.png?height=300&width=500",
-      category: "Full Stack",
-      year: "2025",
-    },
-    {
-      id: 3,
+      id: 6,
       title: "SplendourLux (An Online Shopping Site) 🛍️",
       description: "Modern e-commerce solution with payment integration and inventory management.",
       longDescription:
         "Complete e-commerce platform with user authentication, product catalog, shopping cart, payment processing, and order tracking. Admin dashboard for inventory and order management.",
       technologies: ["React", "SpringBoot", "SQL"],
       github: "https://github.com/IT23231528chamudi/OOAD-Group-12-Frontend.git",
-      demo: "https://youtu.be/5J2v93Uwu90",
+      demo: "#",
       image: "/SplendourLux.png?height=300&width=500",
       category: "Full Stack",
       year: "2024",
-    },
-    {
-      id: 4,
-      title: "DSL and HTML Form Generator 💻",
-      description: "Domain-specific language for generating HTML forms with custom syntax.",
-      longDescription:
-        "Custom DSL built with Lex and Yacc for generating HTML forms. Features include BNF/EBNF grammar definition, lexical analysis, and automatic form generation with styling.",
-      technologies: ["LEX & YACC", "BNF/EBNF", "HTML", "CSS", "JavaScript"],
-      github: "https://github.com/IT23231528chamudi/Building-a-DSL-and-HTML-Form-Generator-with-Lex-and-Yacc-.git",
-      demo: "https://youtu.be/Fatk3f0UGS8",
-      image: "/lex.png?height=300&width=500",
-      category: "Frontend",
-      year: "2025",
-    },
-    {
-      id: 5,
-      title: "Portfolio Website 👩🏻",
-      description: "Personal portfolio showcasing projects and skills.",
-      longDescription:
-        "Responsive portfolio website built with Next.js and Tailwind CSS. Features smooth animations, dark mode, and optimized performance.",
-      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-      github: "https://github.com/Sashanka2001/My_Portfolio_Website.git",
-      demo: "#",
-      image: "/pp.png?height=300&width=500",
-      category: "Frontend",
-      year: "2025",
-    },
-    {
-      id: 6,
-      title: "Fully Functional Calculator 🧮",
-      description: "A fully functional calculator with basic arithmetic operations.",
-      longDescription:
-        "Simple yet effective calculator built with HTML, CSS, and JavaScript. Features include basic arithmetic operations, clear functionality, and responsive design.",
-      technologies: ["HTML", "JavaScript", "CSS"],
-      github: "https://github.com/Sashanka2001/Task_2_CA-D1-3951.git",
-      demo: "https://www.linkedin.com/feed/update/urn:li:activity:7288282943976808448/",
-      image: "/cal.png?height=300&width=500",
-      category: "Frontend",
-      year: "2025",
     },
     {
       id: 7,
@@ -119,8 +120,21 @@ export default function ProjectsPage() {
       category: "Games",
       year: "2024",
     },
-    {
+     {
       id: 8,
+      title: "Design and Functionality of the Web Page 🎨",
+      description: "Modern web page design with interactive functionality.",
+      longDescription:
+        "Responsive web page showcasing modern design principles with interactive elements, smooth animations, and user-friendly interface built with vanilla web technologies.",
+      technologies: ["HTML", "CSS", "Javascript"],
+      github: "https://github.com/Sashanka2001/Design-and-Functionality-of-the-Web-Page-Task-1-.git",
+      demo: "https://youtu.be/aZEJ2L8FcUI",
+      image: "/assi.png?height=300&width=500",
+      category: "Web App",
+      year: "2024",
+    },
+    {
+      id: 9,
       title: "Dynamic Tic Tac Toe Game 🕹️",
       description: "Interactive Tic Tac Toe game with dynamic board size.",
       longDescription:
@@ -133,31 +147,19 @@ export default function ProjectsPage() {
       year: "2023",
     },
     {
-      id: 9,
+      id: 10,
       title: "Smart IoT Food Monitoring System 🥬",
       description: "IoT-based system for monitoring food freshness and storage conditions.",
       longDescription:
         "Smart monitoring system using Arduino sensors to track temperature, humidity, and other factors affecting food quality. Includes web dashboard for real-time monitoring.",
       technologies: ["Arduino", "Firebase", "HTML", "CSS", "Javascript"],
       github: "https://github.com/IT23231528chamudi/The-Smart-IoT-Food-Monitoring-System-master.git",
-      demo: "#",
-      image: "/placeholder.svg?height=300&width=500",
+      demo: "https://youtu.be/H4k7qogUH7w",
+      image: "/CT.jpg?height=300&width=500",
       category: "Full Stack",
       year: "2023",
     },
-    {
-      id: 10,
-      title: "Design and Functionality of the Web Page 🎨",
-      description: "Modern web page design with interactive functionality.",
-      longDescription:
-        "Responsive web page showcasing modern design principles with interactive elements, smooth animations, and user-friendly interface built with vanilla web technologies.",
-      technologies: ["HTML", "CSS", "Javascript"],
-      github: "https://github.com/Sashanka2001/Design-and-Functionality-of-the-Web-Page-Task-1-.git",
-      demo: "#",
-      image: "/placeholder.svg?height=300&width=500",
-      category: "Web App",
-      year: "2024",
-    },
+   
   ]
 
   const categories = ["All", "Full Stack", "Frontend", "Web App", "Games"]

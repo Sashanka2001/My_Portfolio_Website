@@ -5,8 +5,9 @@ import Footer from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { useState } from "react"
-import { Code, Database, Globe, Smartphone, Award, Users, Target, ChevronDown, ChevronUp } from "lucide-react"
+import { Code, Database, Globe, Smartphone, Award, Users, Target, ChevronDown, ChevronUp, Download } from "lucide-react"
 
 export default function AboutPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -352,7 +353,18 @@ export default function AboutPage() {
                   </>
                 )}
               </Button>
+              
             </div>
+          </div>
+
+          {/* Resume Download Link */}
+          <div className="text-center mb-16">
+            <Link href="/resume.pdf" target="_blank">
+              <Button className="bg-teal-600 text-white hover:bg-teal-700">
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </Button>
+            </Link>
           </div>
 
           {/* Interests */}

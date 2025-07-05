@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Download } from "lucide-react"
-import Link from "next/link"
 
 interface HeroSectionProps {
   scrollToSection: (section: string) => void
@@ -74,10 +73,7 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
                 className="border-white/30 text-white hover:bg-white hover:text-slate-900 px-6 py-3 text-base font-semibold tracking-wide bg-white/5 backdrop-blur-sm transition-all duration-300"
                 asChild
               >
-                <Link href="/resume.pdf" target="_blank">
-                  <Download className="w-4 h-4 mr-2" />
-                  DOWNLOAD RESUME
-                </Link>
+                 
               </Button>
             </div>
           </div>
