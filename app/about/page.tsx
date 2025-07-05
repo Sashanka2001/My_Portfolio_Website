@@ -357,15 +357,17 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Resume Download Link */}
-          <div className="text-center mb-16">
+               
+          {/* Resume Download Link  
+          <div className="text-center mb-16"> 
             <Link href="/resume.pdf" target="_blank">
               <Button className="bg-teal-600 text-white hover:bg-teal-700">
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
               </Button>
             </Link>
-          </div>
+          </div>  */} 
+           
 
           {/* Interests */}
           <div className="bg-white rounded-2xl p-8 shadow-lg">
