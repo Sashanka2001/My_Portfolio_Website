@@ -30,7 +30,7 @@ export default function ProjectsPage() {
     {
       id: 1,
       title: "NEMRA Smart Apartment 🏙️",
-      description: "Collaborative apartment management system with real-time updates.",
+      description: "Collaborative apartment management system with real-time updates",
       longDescription:
         "Team collaboration platform with project boards, task assignment, real-time notifications, and progress tracking. Built with modern web technologies.",
       technologies: ["TypeScript", "PostgreSQL", "SpringBoot"],
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
     {
       id: 2,
       title: "DSL and HTML Form Generator 💻",
-      description: "Domain-specific language for generating HTML forms with custom syntax.",
+      description: "Domain-specific language for generating HTML forms with custom syntax",
       longDescription:
         "Custom DSL built with Lex and Yacc for generating HTML forms. Features include BNF/EBNF grammar definition, lexical analysis, and automatic form generation with styling.",
       technologies: ["LEX & YACC", "BNF/EBNF", "HTML", "CSS", "JavaScript"],
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
     {
       id: 3,
       title: "Portfolio Website 👩🏻",
-      description: "Personal portfolio showcasing projects and skills.",
+      description: "Personal portfolio showcasing projects and skills",
       longDescription:
         "Responsive portfolio website built with Next.js and Tailwind CSS. Features smooth animations, dark mode, and optimized performance.",
       technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
@@ -70,7 +70,7 @@ export default function ProjectsPage() {
     {
       id: 4,
       title: "Fully Functional Calculator 🧮",
-      description: "A fully functional calculator with basic arithmetic operations.",
+      description: "A fully functional calculator with basic arithmetic operations",
       longDescription:
         "Simple yet effective calculator built with HTML, CSS, and JavaScript. Features include basic arithmetic operations, clear functionality, and responsive design.",
       technologies: ["HTML", "JavaScript", "CSS"],
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
       id: 5,
       title: "Cozy Cup Coffee Shop 🧋",
       description:
-        "A full-stack web application for a coffee shop with online ordering, user authentication, and payment integration.",
+        "A full-stack web application for a coffee shop with online ordering, user authentication, and payment integration",
       longDescription:
         "Built with React, Node.js, and MongoDB. Features include user registration/login, menu browsing, cart functionality, order management, and admin panel for managing products and orders.",
       technologies: ["React","SQL"],
@@ -110,7 +110,7 @@ export default function ProjectsPage() {
     {
       id: 7,
       title: "Dice Game - YAHTZEE 🎲",
-      description: "Two-player Yahtzee game implemented in C programming language.",
+      description: "Two-player Yahtzee game implemented in C programming language",
       longDescription:
         "Classic Yahtzee dice game for two players built in C. Features include dice rolling, scoring system, turn management, and winner determination.",
       technologies: ["C Language"],
@@ -123,7 +123,7 @@ export default function ProjectsPage() {
      {
       id: 8,
       title: "Design and Functionality of the Web Page 🎨",
-      description: "Modern web page design with interactive functionality.",
+      description: "Modern web page design with interactive functionality",
       longDescription:
         "Responsive web page showcasing modern design principles with interactive elements, smooth animations, and user-friendly interface built with vanilla web technologies.",
       technologies: ["HTML", "CSS", "Javascript"],
@@ -136,7 +136,7 @@ export default function ProjectsPage() {
     {
       id: 9,
       title: "Dynamic Tic Tac Toe Game 🕹️",
-      description: "Interactive Tic Tac Toe game with dynamic board size.",
+      description: "Interactive Tic Tac Toe game with dynamic board size",
       longDescription:
         "Enhanced Tic Tac Toe game built in C with customizable board sizes and intelligent game logic. Features include player vs player mode and win detection.",
       technologies: ["C Language"],
@@ -149,7 +149,7 @@ export default function ProjectsPage() {
     {
       id: 10,
       title: "Smart IoT Food Monitoring System 🥬",
-      description: "An IoT-based system for monitoring food freshness and storage conditions, designed and implemented collaboratively.",
+      description: "An IoT-based system for monitoring food freshness and storage conditions, designed and implemented collaboratively",
       longDescription:
         "Smart monitoring system using Arduino sensors to track temperature, humidity, and other factors affecting food quality. Includes web dashboard for real-time monitoring.",
       technologies: ["Arduino", "Firebase", "HTML", "CSS", "Javascript"],
