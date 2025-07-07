@@ -45,7 +45,7 @@ export default function AboutPage() {
     },
   ]
 
-  const interests = ["Web Development", "Mobile Apps", "UI/UX Design", "AI/ML", "Open Source", "Database Design"]
+  const interests = ["Web Development", "Mobile Apps", "UI/UX Design", "Open Source", "Database Design"]
 
   const certificates = [
     {
