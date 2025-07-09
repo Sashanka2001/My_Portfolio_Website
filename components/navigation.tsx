@@ -4,6 +4,9 @@ import { Menu, X, User, Home, FolderOpen, Mail } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Card, CardContent } from "@/components/ui/card"
+import ThemeToggle from "@/components/theme-toggle"
+
+ 
 
 interface NavigationProps {
   activeSection: string
@@ -52,6 +55,7 @@ export default function Navigation({ activeSection, isMenuOpen, setIsMenuOpen, s
                 </Link>
               )
             })}
+             {/*<ThemeToggle />*/}
           </div>
 
           {/* Mobile Menu Button */}

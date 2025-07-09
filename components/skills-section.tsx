@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 import { ChevronDown, ChevronUp, Code, Zap, Globe, Cpu, Layers, Wrench, Sparkles } from "lucide-react"
 
 const skillIcons: Record<string, string> = {
-   
+  
 }
 
 const categoryIcons = {
@@ -140,14 +140,10 @@ export default function SkillsSection() {
         <div
           className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
         >
-          <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-600 rounded-xl flex items-center justify-center animate-glow">
-              <Code className="w-6 h-6 text-white" />
-            </div>
-            <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100 gradient-text">
-              Skills & Technologies
-            </h2>
-          </div>
+          <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100 gradient-text mb-4">
+            Skills & Technologies
+          </h2>
+
           <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in"></div>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             A comprehensive showcase of technologies and concepts I've mastered through hands-on experience and
@@ -171,8 +167,8 @@ export default function SkillsSection() {
               return (
                 <Card
                   key={category}
-                  className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover dark:bg-slate-700 border-0 ${getCategoryBg(categoryIndex)} animate-bounce-in overflow-hidden relative`}
-                  style={{ animationDelay: `${0.3 + categoryIndex * 0.1}s` }}
+                  className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover dark:bg-slate-700 border-0 ${getCategoryBg(categoryIndex)} ${categoryIndex < 3 ? "animate-bounce-in" : ""} overflow-hidden relative`}
+                  style={categoryIndex < 3 ? { animationDelay: `${0.3 + categoryIndex * 0.1}s` } : {}}
                   onMouseEnter={() => setHoveredCategory(category)}
                   onMouseLeave={() => setHoveredCategory(null)}
                 >
@@ -205,8 +201,8 @@ export default function SkillsSection() {
                       {skillList.map((skill, skillIndex) => (
                         <div
                           key={skillIndex}
-                          className={`group/skill px-3 py-2 bg-white/80 dark:bg-slate-600/50 text-slate-700 dark:text-slate-300 text-sm rounded-xl border border-slate-200/50 dark:border-slate-500/30 flex items-center gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 animate-fade-in-up backdrop-blur-sm`}
-                          style={{ animationDelay: `${0.5 + skillIndex * 0.05}s` }}
+                          className={`group/skill px-3 py-2 bg-white/80 dark:bg-slate-600/50 text-slate-700 dark:text-slate-300 text-sm rounded-xl border border-slate-200/50 dark:border-slate-500/30 flex items-center gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 ${categoryIndex < 3 ? "animate-fade-in-up" : ""} backdrop-blur-sm`}
+                          style={categoryIndex < 3 ? { animationDelay: `${0.5 + skillIndex * 0.05}s` } : {}}
                         >
                           {skillIcons[skill] && (
                             <img

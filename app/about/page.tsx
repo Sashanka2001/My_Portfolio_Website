@@ -169,12 +169,14 @@ export default function AboutPage() {
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-4">About Me</h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Passionate Computer Science student with a love for creating innovative solutions through code.
-            </p>
-          </div>
+          <div className="text-center mb-16 transition-all duration-1000 animate-fade-in-up">
+  <h3 className="text-4xl md:text-6xl font-bold text-slate-800 gradient-text mb-4">About Me</h3>
+  <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in"></div>
+  <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+    Passionate Computer Science student with a love for creating innovative solutions through code.
+  </p>
+</div>
+
 
           {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
@@ -293,9 +295,7 @@ export default function AboutPage() {
                 <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center">
-                        <Award className="w-5 h-5 text-teal-600" />
-                      </div>
+                       
                       <span className="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded-full">{cert.year}</span>
                     </div>
                     <h4 className="font-semibold text-slate-800 mb-2 text-sm leading-tight">{cert.name}</h4>
@@ -336,23 +336,23 @@ export default function AboutPage() {
 
             {/* View All / Show Less Button */}
             <div className="text-center">
-              <Button
-                onClick={() => setShowAllCertificates(!showAllCertificates)}
-                variant="outline"
-                className="bg-teal-50 border-teal-200 text-teal-700 hover:bg-teal-100 hover:border-teal-300 px-6 py-2"
-              >
-                {showAllCertificates ? (
-                  <>
-                    Show Less Certificates
-                    <ChevronUp className="w-4 h-4 ml-2" />
-                  </>
-                ) : (
-                  <>
-                    View All Licenses & Certifications ({certificates.length})
-                    <ChevronDown className="w-4 h-4 ml-2" />
-                  </>
-                )}
-              </Button>
+             <Button
+  onClick={() => setShowAllCertificates(!showAllCertificates)}
+  className="bg-teal-600 text-white hover:bg-teal-700 px-6 py-3 rounded-lg shadow-md transition duration-300 flex items-center justify-center mx-auto"
+>
+  {showAllCertificates ? (
+    <>
+      Show Less Certificates
+      <ChevronUp className="w-4 h-4 ml-2" />
+    </>
+  ) : (
+    <>
+      View All Licenses & Certifications ({certificates.length})
+      <ChevronDown className="w-4 h-4 ml-2" />
+    </>
+  )}
+</Button>
+
               
             </div>
           </div>
