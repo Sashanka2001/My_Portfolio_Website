@@ -16,7 +16,9 @@ const categoryIcons = {
   "Web Technologies": Globe,
   "Programming Paradigms & Principles": Cpu,
   "Development Methodologies": Zap,
-  "Emerging Technologies": Sparkles,
+  "Networking & Security:": Sparkles,
+  "Database:": Code,
+  "Operating Systems:": Code,
 }
 
 export default function SkillsSection() {
@@ -47,46 +49,45 @@ export default function SkillsSection() {
       "Python",
       "Java",
       "C Language",
-      "R Language",
-      "Fortran",
-      "Algol",
       "JavaScript",
       "TypeScript",
+      "R Language",
       "C++ (Self study)",
-      "GNU Octave",
-      "SQL",
     ],
     "Frameworks & Libraries": [
       "React.js",
       "Spring Boot",
       "Angular (Self study)",
-      "AngularJS (Self study)",
       "jQuery (Self study)",
+      "AngularJS (Self study)"
     ],
 
-    "Tools & Technologies": [
-      "Git",
-      "Lex and Yacc",
-      "Jira",
-      "Linux",
-      "Microsoft Office",
-      "Figma",
-      "MySQL",
-      "Arduino",
-      "Wireshark",
-      "RStudio",
-    ],
-
-    "Web Technologies": ["HTML", "CSS"],
-
-    "Programming Paradigms & Principles": [
+     "Programming Paradigms & Principles": [
       "Object-Oriented Programming (OOP)",
       "SOLID Design Principles",
-      "BNF and EBNF",
+      "BNF / EBNF",
+      "Lex and Yacc",
     ],
+
+    " Operating Systems" : ["Linux (Ubuntu)"],
+    
+    "Web Technologies": ["HTML", "CSS"],
+
+    "Dtabase": ["SQL"],
+
     "Development Methodologies": ["Agile Methodologies"],
-    "Emerging Technologies": ["Generative AI and Tools", "Search Engine Technology"],
+
+    "Networking & Security": ["Wireshark (basic protocol analysis and network design)"],
+
+     "Tools & Technologies": [
+      "Git",
+      "Jira",
+      "Figma",
+      "Arduino",
+      "Microsoft Office",
+    ],
   }
+
 
   // Show only first 3 categories initially, or all if showAllSkills is true
   const skillEntries = Object.entries(skills)

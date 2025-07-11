@@ -232,15 +232,15 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-slate-800 mb-6">My Story</h3>
                 <div className="space-y-4 text-slate-600 leading-relaxed">
                   <p>
-                    Hello! I'm Sashanka Rathnayaka, a third-year Computer Science undergraduate at SLIIT with a passion
+                    Hello! I'm Sashanka Rathnayaka, a 3rd year Computer Science undergraduate at SLIIT with a passion
                     for building impactful digital solutions. My journey began with a curiosity about how software
                     works, which soon grew into hands-on experience in full-stack web development, distributed systems,
                     and human-computer interaction.
                   </p>
                   <p>
-                    I specialize in technologies like React.js, Node.js, JavaScript, Python, Java, and SQL, and have
+                    I specialize in technologies like <b>React.js, Node.js, JavaScript, Python, Java, and SQL</b> and have
                     also explored lower-level programming using C, Fortran, and Lex/Yacc. My academic and project work
-                    spans UI/UX design, compiler construction, IoT-based applications, and game development. I'm
+                    spans <b>UI/UX design, compiler construction, IoT-based applications, and game development.</b> I'm
                     familiar with tools like Figma, Jira, and methodologies such as Agile and Scrum.
                   </p>
                   <p>
@@ -273,7 +273,7 @@ export default function AboutPage() {
                     <div className="text-center p-4 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors">
                       <Globe className="w-8 h-8 mx-auto mb-2 text-purple-600" />
                       <h4 className="font-semibold text-slate-800 mb-1">Database</h4>
-                      <p className="text-sm text-slate-600">MySQL, PostgreSQL</p>
+                      <p className="text-sm text-slate-600">SQL</p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-orange-50 hover:bg-orange-100 transition-colors">
                       <Smartphone className="w-8 h-8 mx-auto mb-2 text-orange-600" />

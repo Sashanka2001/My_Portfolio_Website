@@ -105,7 +105,7 @@ export default function AboutSection() {
                     meaningful software solutions.
                   </p>
                   <p className="animate-fade-in-up animate-delay-500">
-                    I enjoy working on both front-end and back-end development, with experience in modern web
+                    I enjoy working on both <b>front-end and back-end development</b> with experience in modern web
                     technologies. I'm always eager to learn new technologies and take on challenging projects that push
                     my boundaries.
                   </p>
