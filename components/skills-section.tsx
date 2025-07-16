@@ -69,7 +69,7 @@ export default function SkillsSection() {
       "Lex and Yacc",
     ],
 
-    " Operating Systems" : ["Linux (Ubuntu)"],
+    "Operating Systems" : ["Linux (Ubuntu)"],
     
     "Web Technologies": ["HTML", "CSS"],
 
