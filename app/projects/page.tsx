@@ -69,6 +69,7 @@ export default function ProjectsPage() {
       demo: "https://youtu.be/Fatk3f0UGS8",
       image: "/lex.png?height=300&width=500",
       category: "Frontend",
+      pdf: "https://mysliit-my.sharepoint.com/:b:/g/personal/it23231528_my_sliit_lk/EY54Ld_BBYpInrpjN5MGO28Bl38EMp6EkMp0zAcMyiL6Dw?e=dYr3I4",
       year: "2025",
     },
     {
@@ -135,10 +136,32 @@ export default function ProjectsPage() {
       demo: "https://youtu.be/YzF8iCasSq8",
       image: "/yatzee.png?height=300&width=500",
       category: "Games",
+      pdf: "https://mysliit-my.sharepoint.com/:b:/g/personal/it23231528_my_sliit_lk/EX-UmE5CccdFmo625lCalXIB5HfTeCM-2IzhZP-Z-TCXZA?e=EDZrcw",
+      year: "2024",
+    },
+
+    {
+      id: 8,
+      title: "Sustainable Computing Research 🌱",
+      description: "Collaboratively researched and proposed strategies to reduce carbon emissions and optimize resource usage in distributed computing systems ",
+      image: "/coa.png?height=300&width=500",
+      category: "Research",
+      technologies: [],
+      pdf : "https://mysliit-my.sharepoint.com/:b:/g/personal/it23231528_my_sliit_lk/EXZ3zqkvj6pGoQxeqJiYyAABFH5WLKmYfLlHc3QFMd8LYw?e=0Rw2yX",
+      year: "2024",
+    },
+     {
+      id: 8,
+      title: "Network Infrastructure Design 🔒",
+      description: "Collaboratively designed a secure and scalable network infrastructure for a small enterprise operating across two floors",
+      image: "/cn.jpeg?height=300&width=500",
+      category: "Research",
+      technologies: [],
+      pdf : "https://mysliit-my.sharepoint.com/:b:/g/personal/it23231528_my_sliit_lk/ES8p-A0kEztOjXhTfw1MVpMBPYDIo_mbJka93oyk2FqcpQ?e=n3fhHf",
       year: "2024",
     },
     {
-      id: 8,
+      id: 9,
       title: "Design and Functionality of the Web Page 🎨",
       description: "Modern web page design with interactive functionality",
       longDescription:
@@ -150,8 +173,9 @@ export default function ProjectsPage() {
       category: "Web App",
       year: "2024",
     },
+
     {
-      id: 9,
+      id: 10,
       title: "Dynamic Tic Tac Toe Game 🕹️",
       description: "Interactive Tic Tac Toe game with dynamic board size",
       longDescription:
@@ -164,7 +188,7 @@ export default function ProjectsPage() {
       year: "2023",
     },
     {
-      id: 10,
+      id: 11,
       title: "Smart IoT Food Monitoring System 🥬",
       description: "An IoT-based system for monitoring food freshness and storage conditions, designed and implemented collaboratively",
       longDescription:
@@ -174,11 +198,12 @@ export default function ProjectsPage() {
       demo: "https://youtu.be/H4k7qogUH7w",
       image: "/CT.jpg?height=300&width=500",
       category: "Full Stack",
+      pdf : "https://mysliit-my.sharepoint.com/:b:/g/personal/it23231528_my_sliit_lk/EdemqOR2GYdJvCD8aqb3DGkBSC2WuVbd8pLgm2QbfhI6bw?e=YLvCoR",
       year: "2023",
     },
   ]
 
-  const categories = ["All", "Full Stack", "Frontend", "Web App", "Games"]
+  const categories = ["All", "Full Stack", "Frontend", "Web App", "Games", "Research"]
 
   const filteredProjects =
     selectedCategory === "All"
@@ -336,6 +361,18 @@ export default function ProjectsPage() {
                         Demo
                       </span>
                     )}
+                    {/* PDF Link */}
+  {project.pdf && (
+    <Link
+      href={project.pdf}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center text-teal-600 text-xs font-medium hover:text-teal-800 transition-colors"
+    >
+      <ExternalLink className="w-3 h-3 mr-1" />
+      View PDF
+    </Link>
+  )}
                   </div>
                 </CardContent>
               </Card>
