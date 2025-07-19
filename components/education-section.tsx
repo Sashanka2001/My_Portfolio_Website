@@ -45,7 +45,7 @@ export default function EducationSection() {
     {
       id: 2,
       degree: "Advanced Level (A/L)",
-      institution: "Holy Family Balika",
+      institution: "Holy Family Balika - Kurunegala",
       status: "Completed",
       stream: "Science Stream (Physical Science)",
       
@@ -58,7 +58,7 @@ export default function EducationSection() {
     {
       id: 3,
       degree: "Primary & Secondary Education",
-      institution: "Wayamba Royal College",
+      institution: "Wayamba Royal College - Kurunegala",
       status: "Completed",
        
       year: "2006 - 2018",
