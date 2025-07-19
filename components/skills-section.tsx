@@ -52,14 +52,10 @@ export default function SkillsSection() {
       "JavaScript",
       "TypeScript",
       "R Language",
-      "C++ (Self study)",
     ],
     "Frameworks & Libraries": [
       "React.js",
       "Spring Boot",
-      "Angular (Self study)",
-      "jQuery (Self study)",
-      "AngularJS (Self study)"
     ],
 
      "Programming Paradigms & Principles": [
