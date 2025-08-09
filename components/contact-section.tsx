@@ -69,6 +69,10 @@ export default function ContactSection() {
     },
   ]
 
+  const isExternal = (url) => {
+    return url.startsWith("http") || url.startsWith("mailto:")
+  }
+
   return (
     <section
       id="contact"
@@ -89,9 +93,13 @@ export default function ContactSection() {
 
       <div className="max-w-6xl mx-auto relative">
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? "animate-fade-in-up" : "opacity-0"
+          }`}
         >
-          <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100 gradient-text mb-4">Get In Touch</h2>
+          <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100 gradient-text mb-4">
+            Get In Touch
+          </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6 animate-scale-in"></div>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             I'm always interested in new opportunities and collaborations. Feel free to reach out if you'd like to
@@ -99,9 +107,11 @@ export default function ContactSection() {
           </p>
         </div>
 
-        {/* Contact Links Grid - Enhanced Certificate Style */}
+        {/* Contact Links Grid */}
         <div
-          className={`bg-white dark:bg-slate-800 rounded-3xl p-12 shadow-2xl relative overflow-hidden transition-all duration-1000 ${isVisible ? "animate-slide-up animate-delay-200" : "opacity-0"}`}
+          className={`bg-white dark:bg-slate-800 rounded-3xl p-12 shadow-2xl relative overflow-hidden transition-all duration-1000 ${
+            isVisible ? "animate-slide-up animate-delay-200" : "opacity-0"
+          }`}
         >
           {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-full blur-2xl"></div>
@@ -110,6 +120,14 @@ export default function ContactSection() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
             {contactLinks.map((contact, index) => {
               const IconComponent = contact.icon
+              const ButtonContent = (
+                <span
+                  className={`inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 border hover:scale-105 hover:shadow-lg ${contact.color}`}
+                >
+                  Connect
+                </span>
+              )
+
               return (
                 <Card
                   key={contact.id}
@@ -134,14 +152,20 @@ export default function ContactSection() {
                       {contact.description}
                     </p>
 
-                    <Link
-                      href={contact.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 border hover:scale-105 hover:shadow-lg ${contact.color}`}
-                    >
-                      Connect
-                    </Link>
+                    {isExternal(contact.href) ? (
+                      <a
+                        href={contact.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                         className="relative z-10"
+                      >
+                        {ButtonContent}
+                      </a>
+                    ) : (
+                      <Link href={contact.href} className="relative z-10">
+                        {ButtonContent}
+                         </Link>
+                    )}
 
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-lg"></div>
