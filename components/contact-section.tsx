@@ -1,7 +1,7 @@
  "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, PenSquare } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -43,9 +43,9 @@ export default function ContactSection() {
       icon: Github,
       href: "https://github.com/IT23231528chamudi",
       description: "View my work projects",
-      color:
-        "bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 border-green-100 dark:border-green-800 hover:bg-green-100 dark:hover:bg-green-900/30",
-      iconColor: "bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400",
+       color:
+        "bg-gray-50 dark:bg-gray-900/20 text-gray-600 dark:text-gray-400 border-gray-100 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900/30",
+      iconColor: "bg-gray-100 dark:bg-gray-900/20 text-gray-600 dark:text-gray-400",
     },
     {
       id: 3,
@@ -59,9 +59,19 @@ export default function ContactSection() {
     },
     {
       id: 4,
+      name: "Medium",
+      icon: PenSquare,
+      href: "https://medium.com/@chamudi_sashanka",
+      description:  "Read my articles",
+      color: "bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 border-purple-100 dark:border-purple-800 hover:bg-purple-100 dark:hover:bg-purple-900/30",
+       iconColor:  "bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400",
+    },
+    
+    {
+      id: 5,
       name: "Email",
       icon: Mail,
-      href: "mailto:sashankarathnayaka01@gmail.com",
+      href: "mailto:chamudisashanka01@gmail.com.com",
       description: "Send me a message",
       color:
         "bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border-red-100 dark:border-red-800 hover:bg-red-100 dark:hover:bg-red-900/30",
@@ -117,7 +127,7 @@ export default function ContactSection() {
           <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-full blur-2xl"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-400/10 to-transparent rounded-full blur-2xl"></div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+           <div className="flex flex-nowrap justify-center gap-4 overflow-x-auto relative">
             {contactLinks.map((contact, index) => {
               const IconComponent = contact.icon
               const ButtonContent = (
