@@ -14,8 +14,8 @@ export default function ContactPage() {
       id: 1,
       icon: Mail,
       title: "Email (Personal)",
-      value: "sashankarathnayaka01@gmail.com",
-      link: "mailto:sashankarathnayaka01@gmail.com",
+      value: "chamudisashanka01@gmail.com",
+      link: "mailto:chamudisashanka01@gmail.com",
       color: "bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400",
     },
     {
