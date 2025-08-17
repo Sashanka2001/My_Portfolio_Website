@@ -44,8 +44,21 @@ export default function ProjectsPage() {
   }
 
   const projects = [
-    {
+     {
       id: 1,
+      title: "CS Study Buddy website 🧑🏻‍💻",
+      description: "CS Study Buddy Website a productivity tool designed to help students stay organized, focused, and on top of their academic tasks in the single place",
+      longDescription: "Why I Built This: As a computer science student myself, I found that juggling assignments, notes, and schedules often becomes overwhelming. This app was born out of that experience to provide a simple, centralized platform that helps students manage their:",
+      technologies: ["React", "SpringBoot" , "SQL"],
+      github: "https://github.com/Sashanka2001/CS-Study-Buddy-website.git",
+      demo: "",
+      image: "#",
+      category: "Full Stack",
+       year: "Currently work on this",
+    },
+
+    {
+      id: 2,
       title: "NEMRA Smart Apartment 🏙️",
       description: "Collaborative apartment management system with real-time updates",
       longDescription:
@@ -59,7 +72,7 @@ export default function ProjectsPage() {
       year: "2025",
     },
     {
-      id: 2,
+      id: 3,
       title: "DSL and HTML Form Generator 💻",
       description: "Domain-specific language for generating HTML forms with custom syntax",
       longDescription:
@@ -73,7 +86,7 @@ export default function ProjectsPage() {
       year: "2025",
     },
     {
-      id: 3,
+      id: 4,
       title: "Portfolio Website 👩🏻",
       description: "Personal portfolio showcasing projects and skills",
       longDescription:
@@ -86,7 +99,7 @@ export default function ProjectsPage() {
       year: "2025",
     },
     {
-      id: 4,
+      id: 5,
       title: "Fully Functional Calculator 🧮",
       description: "A fully functional calculator with basic arithmetic operations",
       longDescription:
@@ -99,7 +112,7 @@ export default function ProjectsPage() {
       year: "2025",
     },
     {
-      id: 5,
+      id: 6,
       title: "Cozy Cup Coffee Shop 🧋",
       description:
         "A full-stack web application for a coffee shop with online ordering, user authentication, and payment integration",
@@ -113,7 +126,7 @@ export default function ProjectsPage() {
       year: "2024",
     },
     {
-      id: 6,
+      id: 7,
       title: "SplendourLux (An Online Shopping Site) 🛍️",
       description: "Developed a modern e-commerce solution with secure payment integration and dynamic inventory management as part of a team collaboration",
       longDescription:
@@ -126,7 +139,7 @@ export default function ProjectsPage() {
       year: "2024",
     },
     {
-      id: 7,
+      id: 8,
       title: "Dice Game - YAHTZEE 🎲",
       description: "Two-player Yahtzee game implemented in C programming language",
       longDescription:
@@ -141,7 +154,7 @@ export default function ProjectsPage() {
     },
 
     {
-      id: 8,
+      id: 9,
       title: "Sustainable Computing Research 🌱",
       description: "Collaboratively researched and proposed strategies to reduce carbon emissions and optimize resource usage in distributed computing systems ",
       image: "/coa.png?height=300&width=500",
@@ -151,7 +164,7 @@ export default function ProjectsPage() {
       year: "2024",
     },
      {
-      id: 8,
+      id: 10,
       title: "Network Infrastructure Design 🔒",
       description: "Collaboratively designed a secure and scalable network infrastructure for a small enterprise operating across two floors",
       image: "/cn.jpeg?height=300&width=500",
@@ -161,7 +174,7 @@ export default function ProjectsPage() {
       year: "2024",
     },
     {
-      id: 9,
+      id: 11,
       title: "Design and Functionality of the Web Page 🎨",
       description: "Modern web page design with interactive functionality",
       longDescription:
@@ -175,7 +188,7 @@ export default function ProjectsPage() {
     },
 
     {
-      id: 10,
+      id: 12,
       title: "Dynamic Tic Tac Toe Game 🕹️",
       description: "Interactive Tic Tac Toe game with dynamic board size",
       longDescription:
@@ -188,7 +201,7 @@ export default function ProjectsPage() {
       year: "2023",
     },
     {
-      id: 11,
+      id: 13,
       title: "Smart IoT Food Monitoring System 🥬",
       description: "An IoT-based system for monitoring food freshness and storage conditions, designed and implemented collaboratively",
       longDescription:
@@ -201,6 +214,7 @@ export default function ProjectsPage() {
       pdf : "https://mysliit-my.sharepoint.com/:b:/g/personal/it23231528_my_sliit_lk/EdemqOR2GYdJvCD8aqb3DGkBSC2WuVbd8pLgm2QbfhI6bw?e=YLvCoR",
       year: "2023",
     },
+    
   ]
 
   const categories = ["All", "Full Stack", "Frontend", "Web App", "Games", "Research"]
