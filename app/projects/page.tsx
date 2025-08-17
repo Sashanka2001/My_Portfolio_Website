@@ -52,7 +52,7 @@ export default function ProjectsPage() {
       technologies: ["React", "SpringBoot" , "SQL"],
       github: "https://github.com/Sashanka2001/CS-Study-Buddy-website.git",
       demo: "",
-      image: "#",
+      image: "cs_buddy.png",
       category: "Full Stack",
        year: "Currently work on this",
     },
