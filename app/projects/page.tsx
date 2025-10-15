@@ -44,6 +44,19 @@ export default function ProjectsPage() {
   }
 
   const projects = [
+      {
+      id: 14,
+      title: "Rock Paper Scissors Game 🎮",
+      description: "A fun Python console game where players compete against the computer in classic Rock-Paper-Scissors",
+      longDescription: "Why I Built This: I created this project to strengthen my basic Python programming skills, practice using conditionals, loops, and input handling. It also includes colorful text and emojis using the Colorama library to make the game more interactive and enjoyable.",    
+      technologies: ["Python Language"],
+      github: "https://github.com/Sashanka2001/Rock-Paper-Scissors-Game.git",
+      demo: "",
+      image: "rock_paper_scissors.png",
+      category: "Games",
+       year: "Currently work on this",
+    },
+
      {
       id: 1,
       title: "CS Study Buddy website 🧑🏻‍💻",
