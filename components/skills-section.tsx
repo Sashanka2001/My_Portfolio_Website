@@ -46,9 +46,9 @@ export default function SkillsSection() {
 
   const skills = {
     "Programming Languages": [
-      "Python",
       "Java",
       "C Language",
+       "Python",
       "JavaScript",
       "TypeScript",
       "R Language",
