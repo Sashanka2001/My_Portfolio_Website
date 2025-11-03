@@ -57,7 +57,7 @@ export default function SkillsSection() {
     " Web Development:": [
       "React",
       "Spring Boot",
-      ".NET",
+      "ASP.NET Web API",
       "Node.js",
       "Next.js",
       "Flutter (Learning)",
