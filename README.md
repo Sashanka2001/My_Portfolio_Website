@@ -150,11 +150,9 @@ This is a personal portfolio project, but suggestions and feedback are welcome!
 
 ## 📞 Contact
 
-- **Email**: [Your Email]
-- **LinkedIn**: [Your LinkedIn]
-- **GitHub**: [Your GitHub]
-- **Website**: [Your Website URL]
+- **Email**:  chamudisashanka01@gmail.com
+- **LinkedIn**: www.linkedin.com/in/sashanka-rathnayaka-5761ab267
+- **Website**:  https://sashankar.vercel.app/
 
 ---
 
-Built with ❤️ using Next.js and Tailwind CSS
