@@ -28,42 +28,44 @@ export default function ProjectsSection() {
   }, [])
 
   const featuredProjects = [
-    {
+     {
       id: 1,
-      title: "Cozy Cup Coffee Shop 🧋",
-      description:
-        "Full-stack web application for a coffee shop with online ordering and user authentication.",
-      technologies: ["React", "SQL"],
-      github: "https://github.com/Sashanka2001/Cozy_Cup",
-      demo:
-        "https://www.linkedin.com/feed/update/urn:li:activity:7286125017543725056/",
-      image: "/cozycup.png?height=300&width=500",
-      year: "2024",
-    },
-    {
-      id: 2,
-      title: "DSL and HTML Form Generator 💻",
-      description:
-        "Domain-specific language for generating HTML forms with custom syntax.",
-      technologies: ["LEX & YACC", "BNF/EBNF", "HTML", "JavaScript", "CSS"],
-      github:
-        "https://github.com/IT23231528chamudi/Building-a-DSL-and-HTML-Form-Generator-with-Lex-and-Yacc-.git",
-      demo: "https://youtu.be/Fatk3f0UGS8",
-      image: "/lex.png?height=300&width=500",
+      title: "Sherine Travels & Tours 🚗",
+      description: "Collaborative vehicle rental management system ",
+      longDescription: "Why I Built This: This was a group project where we developed a complete apartment management system using Node.js, React, and Azure for deployment. I contributed to the notification system, dashboard design, and CI/CD deployment setup. The system supports real-time booking updates, user notifications, and role-based dashboards for efficient management.",
+      technologies: [".NET", "React.js", "Azure", "PostgreSQL" , "Selenium"],
+      github: "https://github.com/it23392830/Sherine_Travels_Vehicle_Rental_Management_System.git",
+      demo: "https://youtu.be/Nw75febT4yo?si=KQo9cFC-uj_yXDt1",
+      image: "sherine_dashboard.png",
+      category: "Full Stack Projects",
       year: "2025",
     },
     {
-      id: 3,
+      id: 2,
       title: "NEMRA Smart Apartment 🏙️",
       description:
         "Collaborative apartment management system with real-time updates.",
-      technologies: ["TypeScript", "PostgreSQL", "SpringBoot"],
+      technologies: ["React (TypeScript) ", "SpringBoot" , "PostgreSQL" ],
       github:
         "https://github.com/SLIIT-FacultyOfComputing/se-group-project-group_12_nemra-apartment_management_system.git",
       demo: "#",
       image: "/nemra.png?height=300&width=500",
       year: "2025",
     },
+    {
+      id: 3,
+      title: "SplendourLux (An Online Shopping Site) 🛍️",
+      description: "Developed a modern e-commerce solution with secure payment integration and dynamic inventory management as part of a team collaboration",
+      longDescription:
+        "Complete e-commerce platform with user authentication, product catalog, shopping cart, payment processing, and order tracking. Admin dashboard for inventory and order management.",
+      technologies: ["React", "SpringBoot", "MYSQL"],
+      github: "https://github.com/IT23231528chamudi/OOAD-Group-12-Frontend.git",
+      demo: "#",
+      image: "/SplendourLux.png?height=300&width=500",
+      category: "Full Stack",
+      year: "2024",
+    },
+    
   ]
 
   const bgColors = [
