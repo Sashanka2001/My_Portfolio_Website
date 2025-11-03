@@ -89,7 +89,7 @@ export default function ProjectsPage() {
       description: "Collaborative apartment management system with real-time updates",
       longDescription:
         "Team collaboration platform with project boards, task assignment, real-time notifications, and progress tracking. Built with modern web technologies.",
-      technologies: ["TypeScript", "PostgreSQL", "SpringBoot", "Paypal Integration", "Jira"],
+      technologies: ["TypeScript", "PostgreSQL", "SpringBoot", "Paypal Integration", "Jira", "Figma"],
       github:
         "https://github.com/SLIIT-FacultyOfComputing/se-group-project-group_12_nemra-apartment_management_system.git",
       demo: "https://youtu.be/MuT70hK8rsE",
@@ -144,7 +144,7 @@ export default function ProjectsPage() {
         "A full-stack web application for a coffee shop with online ordering, user authentication, and payment integration",
       longDescription:
         "Built with React, Node.js, and MongoDB. Features include user registration/login, menu browsing, cart functionality, order management, and admin panel for managing products and orders.",
-      technologies: ["React", "SQL"],
+      technologies: ["React", "SQL", "Figma", "Paypal Integration"],
       github: "https://github.com/Sashanka2001/Cozy_Cup",
       demo: "https://www.linkedin.com/feed/update/urn:li:activity:7286125017543725056/",
       image: "/cozycup.png?height=300&width=500",
@@ -157,7 +157,7 @@ export default function ProjectsPage() {
       description: "Developed a modern e-commerce solution with secure payment integration and dynamic inventory management as part of a team collaboration",
       longDescription:
         "Complete e-commerce platform with user authentication, product catalog, shopping cart, payment processing, and order tracking. Admin dashboard for inventory and order management.",
-      technologies: ["React", "SpringBoot", "SQL"],
+      technologies: ["React", "SpringBoot", "SQL", "Paypal Integration"],
       github: "https://github.com/IT23231528chamudi/OOAD-Group-12-Frontend.git",
       demo: "#",
       image: "/SplendourLux.png?height=300&width=500",
@@ -232,7 +232,7 @@ export default function ProjectsPage() {
       description: "An IoT-based system for monitoring food freshness and storage conditions, designed and implemented collaboratively",
       longDescription:
         "Smart monitoring system using Arduino sensors to track temperature, humidity, and other factors affecting food quality. Includes web dashboard for real-time monitoring.",
-      technologies: ["Arduino", "Firebase", "HTML", "CSS", "Javascript"],
+      technologies: ["ESP8266 Wi Fi Module", "DHT11 Sensor", "MQ2  Gas Sensor", "Firebase", "HTML", "CSS", "Javascript", "Python"],
       github: "https://github.com/IT23231528chamudi/The-Smart-IoT-Food-Monitoring-System-master.git",
       demo: "https://youtu.be/H4k7qogUH7w",
       image: "/CT.jpg?height=300&width=500",
