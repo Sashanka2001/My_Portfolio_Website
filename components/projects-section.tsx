@@ -33,7 +33,7 @@ export default function ProjectsSection() {
       title: "Sherine Travels & Tours 🚗",
       description: "Collaborative vehicle rental management system ",
       longDescription: "Why I Built This: This was a group project where we developed a complete apartment management system using Node.js, React, and Azure for deployment. I contributed to the notification system, dashboard design, and CI/CD deployment setup. The system supports real-time booking updates, user notifications, and role-based dashboards for efficient management.",
-      technologies: ["ASP.NET Web API", "React.js", "Azure", "PostgreSQL", "aypal Integration", "Selenium"],
+      technologies: ["ASP.NET Web API", "React.js", "Azure", "PostgreSQL", "Paypal Integration", "Selenium"],
       github: "https://github.com/it23392830/Sherine_Travels_Vehicle_Rental_Management_System.git",
       demo: "https://youtu.be/Nw75febT4yo?si=KQo9cFC-uj_yXDt1",
       image: "sherine_dashboard.png",
