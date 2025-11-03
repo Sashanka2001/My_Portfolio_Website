@@ -48,7 +48,7 @@ export default function SkillsSection() {
     "Programming Languages": [
       "Java",
       "C Language",
-       "Python",
+      "Python",
       "JavaScript",
       "TypeScript",
       "R Language",
@@ -58,6 +58,9 @@ export default function SkillsSection() {
       "React",
       "Spring Boot",
       ".NET",
+      "Node.js",
+      "Next.js",
+      "Flutter (Learning)",
       "HTML",
       "Tailwind CSS"
 
