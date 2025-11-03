@@ -30,7 +30,7 @@ export default function AboutPage() {
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: "10+ Projects",
+      title: "15+ Projects",
       description: "Completed various web development projects",
     },
     {
@@ -245,7 +245,7 @@ export default function AboutPage() {
                     and human-computer interaction.
                   </p>
                   <p>
-                    I specialize in technologies like <b>React.js, Node.js, JavaScript, Python, Java, and SQL</b> and have
+                    I specialize in technologies like <b>React, Spring Boot, JavaScript,Java, and SQL</b> and have
                     also explored lower-level programming using C, Fortran, and Lex/Yacc. My academic and project work
                     spans <b>UI/UX design, compiler construction, IoT-based applications, and game development.</b> I'm
                     familiar with tools like Figma, Jira, and methodologies such as Agile and Scrum.
@@ -270,22 +270,22 @@ export default function AboutPage() {
                     <div className="text-center p-4 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
                       <Code className="w-8 h-8 mx-auto mb-2 text-blue-600" />
                       <h4 className="font-semibold text-slate-800 mb-1">Frontend</h4>
-                      <p className="text-sm text-slate-600">React, TypeScript</p>
+                      <p className="text-sm text-slate-600">React</p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
                       <Database className="w-8 h-8 mx-auto mb-2 text-green-600" />
                       <h4 className="font-semibold text-slate-800 mb-1">Backend</h4>
-                      <p className="text-sm text-slate-600">Node.js, APIs</p>
+                      <p className="text-sm text-slate-600">Spring Booot, .NET</p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors">
                       <Globe className="w-8 h-8 mx-auto mb-2 text-purple-600" />
                       <h4 className="font-semibold text-slate-800 mb-1">Database</h4>
-                      <p className="text-sm text-slate-600">SQL</p>
+                      <p className="text-sm text-slate-600">MYSQL , PostgreSQL</p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-orange-50 hover:bg-orange-100 transition-colors">
                       <Smartphone className="w-8 h-8 mx-auto mb-2 text-orange-600" />
                       <h4 className="font-semibold text-slate-800 mb-1">Programming Languages</h4>
-                      <p className="text-sm text-slate-600">Python, Java, C</p>
+                      <p className="text-sm text-slate-600"> Java, C, Python </p>
                     </div>
                   </div>
                 </CardContent>
