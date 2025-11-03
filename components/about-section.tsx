@@ -45,7 +45,7 @@ export default function AboutSection() {
     {
       icon: Globe,
       title: "API Development",
-      description: "RESTful APIs and microservices",
+      description: "RESTful APIs",
       color: "bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400",
       borderColor: "border-purple-100 dark:border-purple-800",
     },
