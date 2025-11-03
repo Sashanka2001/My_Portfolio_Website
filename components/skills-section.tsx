@@ -52,35 +52,55 @@ export default function SkillsSection() {
       "JavaScript",
       "TypeScript",
       "R Language",
+      "C# (Learning)"
     ],
-    "Frameworks & Libraries": [
-      "React.js",
+    " Web Development:": [
+      "React",
       "Spring Boot",
+      ".NET",
+      "HTML",
+      "Tailwind CSS"
+
     ],
 
-     "Programming Paradigms & Principles": [
+     "Programming Paradigms &  Development Concepts: ": [
       "Object-Oriented Programming (OOP)",
       "SOLID Design Principles",
+      "SDLC",
+      "ACID Properties",
+      "Agile Development",
       "BNF / EBNF",
       "Lex and Yacc",
     ],
 
     "Operating Systems" : ["Linux (Ubuntu)"],
-    
-    "Web Technologies": ["HTML", "CSS"],
 
-    "Dtabase": ["SQL"],
+    "Dtabase": [
+    "MySQL",
+    "Firebase",
+    "PostgreSQL",
+    ],
 
-    "Development Methodologies": ["Agile Methodologies"],
+    "Cloud Technologies: ": [
+    "Vercel",
+    "AWS (Learning)",
+    "Azure (Learning)",
+    ],
+
+    "Project management Tools": [
+    "Jira",
+    "Clickup",
+    ],
 
     "Networking & Security": ["Wireshark (basic protocol analysis and network design)"],
 
-     "Tools & Technologies": [
+     "Design Tools and IDEs": [
       "Git",
-      "Jira",
+      "draw.io",
       "Figma",
-      "Arduino",
-      "Microsoft Office",
+      "FlutterFlow",
+      "VS Code",
+      "Intellij",
     ],
   }
 
