@@ -200,9 +200,9 @@ export default function AboutPage() {
                 <h2 className="text-2xl font-bold text-slate-800 text-center mb-2">Sashanka Rathnayaka</h2>
                 <p className="text-slate-600 text-center mb-4">Computer Science Student</p>
                 <div className="space-y-2 text-sm text-slate-600">
-                  <p>
+                  {/*<p>
                     <strong>Location:</strong> Sri Lanka
-                  </p>
+                  </p>*/}
                   <p>
                     <strong>Education:</strong> BSc (Hons) in Computer Science
                   </p>
