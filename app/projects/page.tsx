@@ -62,10 +62,11 @@ export default function ProjectsPage() {
       title: "Playwright: Modern Web E2E Testing",
       description: "A comprehensive Playwright testing suite for modern web applications",
       longDescription: "Why I Built This: I developed this Playwright testing suite to streamline end-to-end testing for modern web applications. It includes tests for user authentication, form submissions, and UI interactions, ensuring robust application performance across different browsers and devices. The suite is designed for easy integration into CI/CD pipelines, enhancing development workflows.",
-      technologies: ["Playwright", "TypeScript", "Node.js", "CI/CD Integration"],
+      technologies: ["Playwright", "TypeScript", "JavaScript"],
       github: "https://github.com/IT23231528chamudi/Haycarb_testing.git",
       image: "pw.png",
       category: "Research",
+      year: "2025",
     },
 
 
