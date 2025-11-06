@@ -105,6 +105,10 @@ export default function SkillsSection() {
       "VS Code",
       "Intellij",
     ],
+    "Testing Frameworks and Tools": [
+      "Playwright",
+      "Postman",
+    ]
   }
 
 
