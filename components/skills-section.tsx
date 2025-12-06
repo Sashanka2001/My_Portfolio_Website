@@ -105,6 +105,10 @@ export default function SkillsSection() {
       "Intellij",
     ],
 
+    "Game Engines": [
+      "Unity",
+    ],
+
     "Testing Frameworks and Tools": [
       "Playwright",
       "Swagger",
