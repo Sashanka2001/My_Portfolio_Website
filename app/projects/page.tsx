@@ -44,6 +44,20 @@ export default function ProjectsPage() {
   }
 
   const projects = [
+
+    {
+      id: 17,
+      title: "Hybrid 2D/3D Office Layout Designer 🏢",
+      description: "A hybrid 2D–3D OpenGL Interactive Office Designer featuring custom line/circle rendering",
+      longDescription: "Why I Built This: This was a group project where we developed a complete apartment management system using Node.js, React, and Azure for deployment. I contributed to the notification system, dashboard design, and CI/CD deployment setup. The system supports real-time booking updates, user notifications, and role-based dashboards for efficient management.",
+      technologies: ["C++", "OpenGL"],
+      image: "office_layout.png",
+      category: "Computer Graphics",
+      year: "2025",
+      demo: "https://youtu.be/Q6yK7MJhTIM",
+      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/",
+      github: "#",
+    },
       {
       id: 15,
       title: "Sherine Travels & Tours 🚗",
