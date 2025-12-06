@@ -256,7 +256,7 @@ export default function ProjectsPage() {
     
   ]
 
-  const categories = ["All", "Full Stack", "Frontend", "Web App", "Games", "Research"]
+  const categories = ["All", "Full Stack", "Frontend", "Web App", "Computer Graphics", "Games", "Research"]
 
   const filteredProjects =
     selectedCategory === "All"
