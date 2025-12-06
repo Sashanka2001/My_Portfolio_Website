@@ -107,8 +107,8 @@ export default function SkillsSection() {
 
     "Testing Frameworks and Tools": [
       "Playwright",
-      "Postman",
       "Swagger",
+      "Postman",
     ],
 
      "Networking & Security": ["Wireshark (basic protocol analysis and network design)"],
