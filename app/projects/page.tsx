@@ -46,6 +46,21 @@ export default function ProjectsPage() {
   const projects = [
 
     {
+      id: 18,
+      title: "Magical Christmas Forest VR (Unity XR) 🎄",
+      description: "An immersive VR experience of a magical Christmas forest using Unity XR toolkit",
+      longDescription: "Why I Built This: I developed this VR experience to explore the capabilities of Unity's XR toolkit and create an engaging holiday-themed environment. The project features interactive elements, ambient sounds, and festive visuals to provide users with a captivating virtual escape during the Christmas season.",
+      technologies: ["Unity 3D", "3D Modeling & Scene Design","Animation Systems", "Lighting & Shading","Unity XR Toolkit", "C#"],
+      image: "christmas_forest.png",
+      category: "Graphics & Visualization",
+      year: "2025",
+      demo: "https://youtu.be/8U8u1k-Dows",
+      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/",
+      github: "https://github.com/Sashanka2001/ChristmasForest-UnityProject.git",
+      
+    },
+
+    {
       id: 17,
       title: "Hybrid 2D/3D Office Layout Designer 🏢",
       description: "A hybrid 2D–3D OpenGL Interactive Office Designer featuring custom line/circle rendering",
