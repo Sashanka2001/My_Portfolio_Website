@@ -95,7 +95,6 @@ export default function SkillsSection() {
     "Clickup",
     ],
 
-    "Networking & Security": ["Wireshark (basic protocol analysis and network design)"],
 
      "Design Tools and IDEs": [
       "Git",
@@ -105,10 +104,16 @@ export default function SkillsSection() {
       "VS Code",
       "Intellij",
     ],
+
     "Testing Frameworks and Tools": [
       "Playwright",
       "Postman",
-    ]
+      "Swagger",
+    ],
+
+     "Networking & Security": ["Wireshark (basic protocol analysis and network design)"],
+
+    
   }
 
 
