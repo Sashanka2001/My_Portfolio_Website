@@ -82,7 +82,7 @@ export default function ProjectsPage() {
       github: "https://github.com/it23392830/Sherine_Travels_Vehicle_Rental_Management_System.git",
       demo: "https://youtu.be/Nw75febT4yo?si=KQo9cFC-uj_yXDt1",
       image: "sherine_dashboard.png",
-      category: "Full Stack Projects",
+      category: "Full Stack",
       year: "2025",
     },
 
