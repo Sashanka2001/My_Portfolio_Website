@@ -68,7 +68,7 @@ export default function ProjectsPage() {
       category: "Graphics & Visualization",
       year: "2025",
       demo: "https://youtu.be/8U8u1k-Dows",
-      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/",
+      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/1826033900/multiple-media-viewer/?profileId=ACoAAEFYs2oB9nKVGXPNt8vWCYAU1ca6-YKyiSk&treasuryMediaId=1764910109973",
       github: "https://github.com/Sashanka2001/ChristmasForest-UnityProject.git",
     },
 
