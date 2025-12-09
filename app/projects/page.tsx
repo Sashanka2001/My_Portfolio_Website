@@ -44,6 +44,19 @@ export default function ProjectsPage() {
   }
 
   const projects = [
+    {
+      id: 19,
+      title: "Parallel Graph Traversal - BFS & DFS  🔍",
+      description: "Research on parallel graph traversal algorithms using BFS and DFS with various parallelization techniques",
+      longDescription: "Why I Built This: I undertook this research project to explore the performance of parallel graph traversal algorithms using different parallelization techniques such as OpenMP, MPI, and CUDA. The goal was to analyze how these methods can optimize the traversal of large-scale graphs, which is crucial in various applications like social network analysis, web crawling, and bioinformatics. The project involved implementing BFS and DFS algorithms in serial and parallel forms, benchmarking their performance, and evaluating scalability across different hardware architectures.",
+      technologies: ["C", "OpenMP", "MPI", "CUDA"],
+      image: "graph_traversal.png",
+      category: "Research",
+      year: "2025",
+      demo: "https://youtu.be/PFOa2RiAXVI",
+      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/2007093250/multiple-media-viewer/?profileId=ACoAAEFYs2oB9nKVGXPNt8vWCYAU1ca6-YKyiSk&treasuryMediaId=1765091168891",
+      github: "https://github.com/IT23231528chamudi/IT23231528_parallel_graph_traversal.git",
+    },
 
     {
       id: 18,
@@ -57,7 +70,6 @@ export default function ProjectsPage() {
       demo: "https://youtu.be/8U8u1k-Dows",
       pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/",
       github: "https://github.com/Sashanka2001/ChristmasForest-UnityProject.git",
-      
     },
 
     {
