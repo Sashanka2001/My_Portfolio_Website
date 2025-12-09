@@ -82,7 +82,7 @@ export default function ProjectsPage() {
       category: "Graphics & Visualization",
       year: "2025",
       demo: "https://youtu.be/Q6yK7MJhTIM",
-      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/",
+      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/1826033900/multiple-media-viewer/?profileId=ACoAAEFYs2oB9nKVGXPNt8vWCYAU1ca6-YKyiSk&treasuryMediaId=1764910109972",
       github: "#",
     },
       {
