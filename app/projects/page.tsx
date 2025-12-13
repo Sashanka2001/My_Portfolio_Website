@@ -75,7 +75,7 @@ export default function ProjectsPage() {
     {
       id: 17,
       title: "Hybrid 2D/3D Office Layout Designer 🏢",
-      description: "A hybrid 2D–3D OpenGL Interactive Office Designer featuring custom line/circle rendering",
+      description: "A hybrid 2D - 3D OpenGL Interactive Office Designer featuring custom line/circle rendering",
       longDescription: "Why I Built This: This was a group project where we developed a complete apartment management system using Node.js, React, and Azure for deployment. I contributed to the notification system, dashboard design, and CI/CD deployment setup. The system supports real-time booking updates, user notifications, and role-based dashboards for efficient management.",
       technologies: ["C++", "OpenGL"],
       image: "office_layout.png",
@@ -127,14 +127,14 @@ export default function ProjectsPage() {
      {
       id: 1,
       title: "CS Study Buddy website 🧑🏻‍💻",
-      description: "CS Study Buddy Website a productivity tool designed to help students stay organized, focused, and on top of their academic tasks in the single place",
+      description: " A web application help to students manage assignments, notes, and schedules",
       longDescription: "Why I Built This: As a computer science student myself, I found that juggling assignments, notes, and schedules often becomes overwhelming. This app was born out of that experience to provide a simple, centralized platform that helps students manage their:",
       technologies: ["React", "SpringBoot" , "SQL"],
       github: "https://github.com/Sashanka2001/CS-Study-Buddy-website.git",
       demo: "",
-      image: "cs_buddy.png",
+      image: "cs.png",
       category: "Full Stack",
-       year: "Currently work on this",
+       year: "2025",
     },
 
     {
