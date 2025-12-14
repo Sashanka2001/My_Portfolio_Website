@@ -45,6 +45,19 @@ export default function ProjectsPage() {
 
   const projects = [
     {
+      id: 20,
+      title: "Focus Mode – Smart Productivity Site ⏳",
+      description: "A productivity web app that helps users stay focused by blocking distracting websites",
+      longDescription: "Why I Built This: I created Focus Mode to help users enhance their productivity by minimizing distractions from commonly visited websites. The app allows users to set focus sessions during which specified distracting sites are blocked, encouraging better concentration on tasks at hand. This project was inspired by the increasing need for effective time management tools in our digital age, where distractions are just a click away. By developing this app, I aimed to provide a simple yet effective solution for individuals looking to improve their focus and productivity.",
+      technologies: ["React.js", "Node.js","Chrome Extensions"],
+      image: "FM.png",
+      category: "Web App",
+      year: "Currently work on this",
+      demo: "#",
+       github: "https://github.com/Sashanka2001/Focus-Mode.git",
+    },
+
+    {
       id: 19,
       title: "Parallel Graph Traversal - BFS & DFS  🔍",
       description: "Research on parallel graph traversal algorithms using BFS and DFS with various parallelization techniques",
