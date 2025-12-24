@@ -60,6 +60,7 @@ export default function SkillsSection() {
       "Spring Boot",
       "ASP.NET Web API",
       "Node.js",
+      "Express.js",
       "Flutter (Learning)",
       "HTML",
       "Tailwind CSS",
