@@ -49,7 +49,7 @@ export default function ProjectsPage() {
       title: "Employee-Leave-Management-System 🗂️",
       description: "A web application for managing employee leave requests and approvals",
       longDescription: "Why I Built This: I developed the Employee Leave Management System to streamline the process of managing employee leave requests and approvals within an organization. The system allows employees to submit leave requests, view their leave balances, and track the status of their requests. Managers can review and approve or reject leave requests, as well as generate reports on leave usage. This project was motivated by the need for an efficient and organized way to handle leave management, reducing paperwork and improving communication between employees and management.",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
+      technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
       image: "leave.png",
       category: "Full Stack",
       year: "2025",
