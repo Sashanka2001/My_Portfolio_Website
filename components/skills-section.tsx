@@ -77,11 +77,11 @@ export default function SkillsSection() {
     ],
     
      "Programming Paradigms &  Development Concepts: ": [
-      "Object-Oriented Programming (OOP)",
-      "SOLID Design Principles",
+      "OOP",
+      "SOLID",
       "SDLC",
-      "ACID Properties",
-      "Agile Development",
+      "ACID",
+      "Agile",
       "BNF / EBNF",
       "Lex and Yacc",
     ],
@@ -98,7 +98,6 @@ export default function SkillsSection() {
     "Jira",
     "Clickup",
     ],
-
 
      "Design Tools and IDEs": [
       "Git",
