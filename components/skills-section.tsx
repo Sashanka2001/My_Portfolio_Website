@@ -62,8 +62,8 @@ export default function SkillsSection() {
       "Next.js",
       "Flutter (Learning)",
       "HTML",
-      "Tailwind CSS"
-
+      "Tailwind CSS",
+      "CSS"
     ],
 
      "Programming Paradigms &  Development Concepts: ": [
