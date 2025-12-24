@@ -30,7 +30,7 @@ export default function AboutPage() {
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: "15+ Projects",
+      title: "21+ Projects",
       description: "Completed various web development projects",
     },
     {
