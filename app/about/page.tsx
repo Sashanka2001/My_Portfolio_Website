@@ -275,12 +275,12 @@ export default function AboutPage() {
                     <div className="text-center p-4 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
                       <Database className="w-8 h-8 mx-auto mb-2 text-green-600" />
                       <h4 className="font-semibold text-slate-800 mb-1">Backend</h4>
-                      <p className="text-sm text-slate-600">Spring Booot, .NET</p>
+                      <p className="text-sm text-slate-600">Spring Booot, Node.js(Express), .NET</p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors">
                       <Globe className="w-8 h-8 mx-auto mb-2 text-purple-600" />
                       <h4 className="font-semibold text-slate-800 mb-1">Database</h4>
-                      <p className="text-sm text-slate-600">MYSQL , PostgreSQL</p>
+                      <p className="text-sm text-slate-600">MYSQL, PostgreSQL, MongoDB, Firebase</p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-orange-50 hover:bg-orange-100 transition-colors">
                       <Smartphone className="w-8 h-8 mx-auto mb-2 text-orange-600" />
