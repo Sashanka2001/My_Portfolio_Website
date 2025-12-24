@@ -245,9 +245,9 @@ export default function AboutPage() {
                     and human-computer interaction.
                   </p>
                   <p>
-                    I specialize in technologies like <b>React, Spring Boot, JavaScript,Java, and SQL</b> and have
+                    I specialize in technologies like <b>React, Next.js, Node.js(Express), Spring Boot and SQL</b> and have
                     also explored lower-level programming using C, Fortran, and Lex/Yacc. My academic and project work
-                    spans <b>UI/UX design, compiler construction, IoT-based applications, and game development.</b> I'm
+                    spans <b>Web Development, IoT-based applications, UI/UX design, compiler construction, and game development.</b> I'm
                     familiar with tools like Figma, Jira, and methodologies such as Agile and Scrum.
                   </p>
                   <p>
