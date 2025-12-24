@@ -81,6 +81,7 @@ export default function SkillsSection() {
 
     "Dtabase": [
     "MySQL",
+    "MongoDB",
     "Firebase",
     "PostgreSQL",
     ],
