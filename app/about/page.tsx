@@ -270,7 +270,7 @@ export default function AboutPage() {
                     <div className="text-center p-4 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
                       <Code className="w-8 h-8 mx-auto mb-2 text-blue-600" />
                       <h4 className="font-semibold text-slate-800 mb-1">Frontend</h4>
-                      <p className="text-sm text-slate-600">React</p>
+                      <p className="text-sm text-slate-600">React, Next.js</p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
                       <Database className="w-8 h-8 mx-auto mb-2 text-green-600" />
