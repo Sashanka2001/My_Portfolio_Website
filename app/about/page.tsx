@@ -285,7 +285,7 @@ export default function AboutPage() {
                     <div className="text-center p-4 rounded-lg bg-orange-50 hover:bg-orange-100 transition-colors">
                       <Smartphone className="w-8 h-8 mx-auto mb-2 text-orange-600" />
                       <h4 className="font-semibold text-slate-800 mb-1">Programming Languages</h4>
-                      <p className="text-sm text-slate-600"> Java, C, Javascript, Python </p>
+                      <p className="text-sm text-slate-600"> Java, C, Javascript, Typescript, Python </p>
                     </div>
                   </div>
                 </CardContent>
