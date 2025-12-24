@@ -54,7 +54,7 @@ export default function ProjectsPage() {
       category: "Full Stack",
       year: "2025",
       demo: "#",
-       github: "",
+       github: "https://github.com/Sashanka2001/Employee-Leave-Management-System.git",
     },
     
     {
