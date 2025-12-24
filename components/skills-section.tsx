@@ -45,16 +45,8 @@ export default function SkillsSection() {
   }, [])
 
   const skills = {
-    "Programming Languages": [
-      "Java",
-      "C Language",
-      "Python",
-      "JavaScript",
-      "TypeScript",
-      "R Language",
-      "C# (Learning)"
-    ],
-    " Web Development:": [
+
+       " Web Development:": [
       "React",
       "Next.js",
       "Spring Boot",
@@ -67,6 +59,23 @@ export default function SkillsSection() {
       "CSS"
     ],
 
+    "Programming Languages": [
+      "Java",
+      "C Language",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "R Language",
+      "C# (Learning)"
+    ],
+
+       "Dtabase": [
+    "MySQL",
+    "MongoDB",
+    "Firebase",
+    "PostgreSQL",
+    ],
+    
      "Programming Paradigms &  Development Concepts: ": [
       "Object-Oriented Programming (OOP)",
       "SOLID Design Principles",
@@ -78,13 +87,6 @@ export default function SkillsSection() {
     ],
 
     "Operating Systems" : ["Linux (Ubuntu)"],
-
-    "Dtabase": [
-    "MySQL",
-    "MongoDB",
-    "Firebase",
-    "PostgreSQL",
-    ],
 
     "Cloud Technologies: ": [
     "Vercel",
