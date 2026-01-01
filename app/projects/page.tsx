@@ -45,8 +45,25 @@ export default function ProjectsPage() {
 
   const projects = [
     {
+      id: 22,
+      title: "Watchlist – Movie Tracking & Rating Web App (MERN Stack)🎥",
+      description: "A web application for tracking and rating movies with user authentication",
+      longDescription: "Why I Built This: I developed the Watchlist Movie Tracking & Rating Web App to provide movie enthusiasts with a platform to easily track and rate the movies they watch. The app allows users to create personalized watchlists, rate movies, and discover new films based on their preferences. This project was motivated by my passion for movies and the desire to create a user-friendly application that enhances the movie-watching experience. By leveraging the MERN stack, I aimed to build a robust and scalable web application that offers seamless performance and an engaging user interface.",
+      technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
+      image: "watchlist.png",
+      category: "Full Stack",
+      year: "2026",
+      demo: "https://youtu.be/XoVfIhA3URQ",
+      github: "https://github.com/Sashanka2001/Watchlist.git",
+
+
+       
+
+    },
+
+    {
       id: 21,
-      title: "Employee-Leave-Management-System 🗂️",
+      title: "Employee Leave Management System (MERN Stack) 🗂️",
       description: "A web application for managing employee leave requests and approvals",
       longDescription: "Why I Built This: I developed the Employee Leave Management System to streamline the process of managing employee leave requests and approvals within an organization. The system allows employees to submit leave requests, view their leave balances, and track the status of their requests. Managers can review and approve or reject leave requests, as well as generate reports on leave usage. This project was motivated by the need for an efficient and organized way to handle leave management, reducing paperwork and improving communication between employees and management.",
       technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
