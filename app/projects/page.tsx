@@ -55,10 +55,6 @@ export default function ProjectsPage() {
       year: "2026",
       demo: "https://youtu.be/XoVfIhA3URQ",
       github: "https://github.com/Sashanka2001/Watchlist.git",
-
-
-       
-
     },
 
     {
@@ -82,7 +78,7 @@ export default function ProjectsPage() {
       technologies: ["React.js", "Node.js","Chrome Extensions"],
       image: "FM.png",
       category: "Web App",
-      year: "Currently work on this",
+      year: "2025",
       demo: "#",
        github: "https://github.com/Sashanka2001/Focus-Mode.git",
     },
