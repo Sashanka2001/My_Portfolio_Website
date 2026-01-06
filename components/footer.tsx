@@ -115,7 +115,7 @@ export default function Footer() {
                   </div>
                   <div className="mt-3">
                     <span className="px-2 py-1 bg-teal-600/20 text-teal-300 rounded-full text-xs border border-teal-500/30">
-                      Available for Internships
+                      Available for SE Internships
                     </span>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export default function Footer() {
         {/* Copyright - Made Smaller */}
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700/50 rounded-full border border-slate-600/30">
-            <span className="text-slate-300 text-xs">© 2025 Sashanka Rathnayaka</span>
+            <span className="text-slate-300 text-xs">© 2026 Sashanka Rathnayaka</span>
             <span className="w-1 h-1 bg-teal-400 rounded-full"></span>
             <span className="text-slate-400 text-xs">All rights reserved</span>
           </div>
