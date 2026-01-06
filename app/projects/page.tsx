@@ -53,7 +53,7 @@ export default function ProjectsPage() {
       image: "watchlist.png",
       category: "Full Stack",
       year: "2026",
-      demo: "https://youtu.be/XoVfIhA3URQ",
+      demo: "https://youtu.be/TaE3uieW9gw",
       github: "https://github.com/Sashanka2001/Watchlist.git",
     },
 
