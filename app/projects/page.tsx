@@ -66,7 +66,7 @@ export default function ProjectsPage() {
       image: "leave.png",
       category: "Full Stack",
       year: "2025",
-      demo: "#",
+      demo: "https://youtu.be/YWpJNqvaTr4",
        github: "https://github.com/Sashanka2001/Employee-Leave-Management-System.git",
     },
     
