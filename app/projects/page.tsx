@@ -212,7 +212,7 @@ export default function ProjectsPage() {
         "Responsive portfolio website built with Next.js and Tailwind CSS. Features smooth animations, dark mode, and optimized performance.",
       technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
       github: "https://github.com/Sashanka2001/My_Portfolio_Website.git",
-      demo: "#",
+      demo: "https://sashankar.vercel.app/",
       image: "/pf.png?height=300&width=500",
       category: "Frontend",
       year: "2025",
