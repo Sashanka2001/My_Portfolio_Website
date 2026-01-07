@@ -79,7 +79,7 @@ export default function ProjectsPage() {
       image: "FM.png",
       category: "Web App",
       year: "2025",
-      demo: "#",
+      demo: "https://focus-mode-sashanka.vercel.app/",
        github: "https://github.com/Sashanka2001/Focus-Mode.git",
     },
 
