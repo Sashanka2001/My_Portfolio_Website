@@ -1,8 +1,8 @@
- "use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
-import Link from "next/link"
+import { Card, CardContent } from "@/components/ui/card";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   const socialLinks = [
@@ -27,14 +27,14 @@ export default function Footer() {
       color: "hover:text-red-400",
       bgColor: "hover:bg-red-100",
     },
-  ]
+  ];
 
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/contact" },
-  ]
+  ];
 
   return (
     <footer className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-8 px-6 sm:px-10 lg:px-20">
@@ -48,14 +48,16 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mb-3">
                   <MapPin className="w-4 h-4 text-teal-600" />
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-white">Sashanka Rathnayaka</h3>
+                <h3 className="text-lg font-bold mb-2 text-white">
+                  Sashanka Rathnayaka
+                </h3>
                 <p className="text-slate-300 text-xs mb-3 leading-relaxed">
-                  Computer Science student passionate about creating innovative web solutions and building impactful
-                  digital experiences.
+                  Computer Science student passionate about creating innovative
+                  web solutions and building impactful digital experiences.
                 </p>
                 <div className="flex gap-2">
                   {socialLinks.map((social) => {
-                    const IconComponent = social.icon
+                    const IconComponent = social.icon;
                     return (
                       <Link
                         key={social.name}
@@ -66,7 +68,7 @@ export default function Footer() {
                       >
                         <IconComponent className="w-3 h-3" />
                       </Link>
-                    )
+                    );
                   })}
                 </div>
               </CardContent>
@@ -78,7 +80,9 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mb-3">
                   <Phone className="w-4 h-4 text-blue-600" />
                 </div>
-                <h4 className="font-semibold mb-3 text-white text-sm">Quick Links</h4>
+                <h4 className="font-semibold mb-3 text-white text-sm">
+                  Quick Links
+                </h4>
                 <ul className="space-y-1">
                   {quickLinks.map((link) => (
                     <li key={link.name}>
@@ -101,11 +105,16 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mb-3">
                   <Mail className="w-4 h-4 text-green-600" />
                 </div>
-                <h4 className="font-semibold mb-3 text-white text-sm">Get In Touch</h4>
+                <h4 className="font-semibold mb-3 text-white text-sm">
+                  Get In Touch
+                </h4>
                 <div className="space-y-2 text-xs">
                   <div className="flex items-center gap-2 text-slate-300">
                     <Mail className="w-3 h-3 text-red-400" />
-                    <a href="mailto:chamudisashanka01@gmail.com" className="hover:text-red-400 transition-colors">
+                    <a
+                      href="mailto:chamudisashanka01@gmail.com"
+                      className="hover:text-red-400 transition-colors"
+                    >
                       chamudisashanka01@gmail.com
                     </a>
                   </div>
@@ -115,7 +124,7 @@ export default function Footer() {
                   </div>
                   <div className="mt-3">
                     <span className="px-2 py-1 bg-teal-600/20 text-teal-300 rounded-full text-xs border border-teal-500/30">
-                      Available for SE Internships
+                      Available for Freelance Projects
                     </span>
                   </div>
                 </div>
@@ -127,12 +136,14 @@ export default function Footer() {
         {/* Copyright - Made Smaller */}
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700/50 rounded-full border border-slate-600/30">
-            <span className="text-slate-300 text-xs">© 2026 Sashanka Rathnayaka</span>
+            <span className="text-slate-300 text-xs">
+              © 2026 Sashanka Rathnayaka
+            </span>
             <span className="w-1 h-1 bg-teal-400 rounded-full"></span>
             <span className="text-slate-400 text-xs">All rights reserved</span>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
