@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Briefcase } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function ExperienceSection() {
@@ -35,11 +35,7 @@ export default function ExperienceSection() {
         "Internship · Colombo, Western Province, Sri Lanka · On-site",
       details:
         "Working as a Software Engineer Intern, developing and maintaining web applications using modern technologies. Contributing to full-stack development projects and gaining hands-on experience in professional software development practices. Key responsibilities include: Front End Software Development, Back End Software Development, Full Stack Software Development, Web Development, and Database Administration.",
-      skills: [
-        "Vue.js",
-        "MYSQL",
-        "Spring Boot",
-      ],
+      skills: ["Vue.js", "MYSQL", "Spring Boot"],
       year: "2026 jan - Present",
       type: "Internship",
     },
@@ -108,7 +104,11 @@ export default function ExperienceSection() {
                 <CardContent className="p-8 relative">
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-14 h-14 bg-gradient-to-r from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 animate-float">
-                      <GraduationCap className="w-7 h-7 text-white" />
+                      {experience.type === "Internship" ? (
+                        <Briefcase className="w-7 h-7 text-white" />
+                      ) : (
+                        <GraduationCap className="w-7 h-7 text-white" />
+                      )}
                     </div>
                     <span className="text-xs bg-slate-100 dark:bg-slate-600 text-slate-600 dark:text-slate-300 px-3 py-2 rounded-full font-medium">
                       {experience.year}
