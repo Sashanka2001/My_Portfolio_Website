@@ -95,15 +95,31 @@ export default function ExperienceSection() {
             {experiences.map((experience, index) => (
               <Card
                 key={experience.id}
-                className="group hover:shadow-2xl transition-all duration-500 hover-lift card-hover dark:bg-slate-700 border-0 bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-900/10 dark:to-blue-900/10 animate-bounce-in overflow-hidden relative"
+                className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover dark:bg-slate-700 border-0 animate-bounce-in overflow-hidden relative ${
+                  experience.type === "Internship"
+                    ? "bg-gradient-to-br from-pink-50 to-purple-50 dark:from-pink-900/10 dark:to-purple-900/10"
+                    : "bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-900/10 dark:to-blue-900/10"
+                }`}
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
                 {/* Card Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-blue-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                <div
+                  className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 ${
+                    experience.type === "Internship"
+                      ? "bg-gradient-to-r from-pink-500 to-purple-600"
+                      : "bg-gradient-to-r from-teal-500 to-blue-600"
+                  }`}
+                ></div>
 
                 <CardContent className="p-8 relative">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-14 h-14 bg-gradient-to-r from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 animate-float">
+                    <div
+                      className={`w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 animate-float ${
+                        experience.type === "Internship"
+                          ? "bg-gradient-to-r from-pink-500 to-purple-600"
+                          : "bg-gradient-to-r from-teal-500 to-blue-600"
+                      }`}
+                    >
                       {experience.type === "Internship" ? (
                         <Briefcase className="w-7 h-7 text-white" />
                       ) : (
@@ -144,7 +160,13 @@ export default function ExperienceSection() {
                   </div>
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-lg"></div>
+                  <div
+                    className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-lg ${
+                      experience.type === "Internship"
+                        ? "bg-gradient-to-br from-pink-500 to-purple-600"
+                        : "bg-gradient-to-br from-teal-500 to-blue-600"
+                    }`}
+                  ></div>
                 </CardContent>
               </Card>
             ))}
