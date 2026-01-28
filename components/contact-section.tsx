@@ -113,7 +113,7 @@ export default function ContactSection() {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6 animate-scale-in"></div>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             I'm always interested in new opportunities and collaborations. Feel free to reach out if you'd like to
-            discuss projects, internships, or just connect!
+            discuss projects just connect!
           </p>
         </div>
 
