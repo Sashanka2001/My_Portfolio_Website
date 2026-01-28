@@ -1,43 +1,60 @@
- "use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { GraduationCap } from "lucide-react"
-import { useState, useEffect } from "react"
+import { Card, CardContent } from "@/components/ui/card";
+import { GraduationCap } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function ExperienceSection() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
       { threshold: 0.1 },
-    )
+    );
 
-    const section = document.getElementById("experience")
+    const section = document.getElementById("experience");
     if (section) {
-      observer.observe(section)
+      observer.observe(section);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   const experiences = [
     {
       id: 1,
+      title: "Software Engineer Intern",
+      organization:
+        "Ministry of Finance - Information Technology Management Department (ITMD)",
+      description:
+        "Internship · Colombo, Western Province, Sri Lanka · On-site",
+      details:
+        "Working as a Software Engineer Intern, developing and maintaining web applications using modern technologies. Contributing to full-stack development projects and gaining hands-on experience in professional software development practices. Key responsibilities include: Front End Software Development, Back End Software Development, Full Stack Software Development, Web Development, and Database Administration.",
+      skills: [
+        "Vue.js",
+        "MYSQL",
+        "Spring Boot",
+      ],
+      year: "2026 jan - Present",
+      type: "Internship",
+    },
+    {
+      id: 2,
       title: "Computer Science Student",
       organization: "SLIIT",
       description: "Currently pursuing Bachelor's degree in Computer Science",
       details:
         "Actively learning and applying computer science principles through coursework and personal projects. Focus areas include software development, algorithms, data structures, and web technologies.",
       skills: ["Academic Projects", "Team Collaboration", "Problem Solving"],
-      year: "2023 - Present",
+      year: "2023 July - Present",
       type: "Education",
     },
-  ]
+  ];
 
   return (
     <section
@@ -61,7 +78,9 @@ export default function ExperienceSection() {
         <div
           className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
         >
-          <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100 gradient-text mb-4">Experience</h2>
+          <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100 gradient-text mb-4">
+            Experience
+          </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in"></div>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             My educational journey and learning experiences in computer science.
@@ -102,7 +121,9 @@ export default function ExperienceSection() {
                   <p className="text-sm text-slate-600 dark:text-slate-300 mb-3 font-semibold">
                     {experience.organization}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">{experience.description}</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                    {experience.description}
+                  </p>
                   <p className="text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                     {experience.details}
                   </p>
@@ -113,7 +134,9 @@ export default function ExperienceSection() {
                       <span
                         key={skillIndex}
                         className="px-3 py-2 bg-white/80 dark:bg-slate-600/50 text-slate-700 dark:text-slate-300 text-sm rounded-xl border border-slate-200/50 dark:border-slate-500/30 font-medium hover:scale-105 transition-transform duration-200 animate-fade-in-up backdrop-blur-sm"
-                        style={{ animationDelay: `${0.5 + skillIndex * 0.05}s` }}
+                        style={{
+                          animationDelay: `${0.5 + skillIndex * 0.05}s`,
+                        }}
                       >
                         {skill}
                       </span>
@@ -129,5 +152,5 @@ export default function ExperienceSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
