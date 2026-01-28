@@ -48,7 +48,6 @@ export default function EducationSection() {
       institution: "Holy Family Balika - Kurunegala",
       status: "Completed",
       stream: "Science Stream (Physical Science)",
-      
       coreSubjects: ["Physics", "Chemistry", "Combined Mathematics"],
       year: "2018 - 2020",
       grade: "A/L",
@@ -60,7 +59,7 @@ export default function EducationSection() {
       degree: "Primary & Secondary Education",
       institution: "Wayamba Royal College - Kurunegala",
       status: "Completed",
-       
+      coreSubjects: ["Mathematics", "Science", "Buddhism", "English", "History","Sinhala", "Tamil","Eastern Music", "ICT"],
       year: "2006 - 2018",
       grade: "Grade 1 to 11",
       type: "School",
