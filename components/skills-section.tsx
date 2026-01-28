@@ -49,6 +49,7 @@ export default function SkillsSection() {
        " Web Development:": [
       "React",
       "Next.js",
+      "Vue.js",
       "Spring Boot",
       "ASP.NET Web API",
       "Node.js",
