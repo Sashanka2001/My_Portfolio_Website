@@ -154,19 +154,21 @@ export default function ContactPage() {
                         Currently Available
                       </h3>
                       <p className="text-slate-600 dark:text-slate-300 mb-4">
-                        I'm actively seeking SE internship opportunities and freelance projects. Let's discuss how I can
-                        contribute to your team!
+                         Currently working as a Software Engineer Intern while actively seeking freelance projects and collaboration opportunities. 
+                         I'd love to discuss how I can contribute to your project!
                       </p>
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-teal-50 dark:bg-teal-900/20 text-teal-600 dark:text-teal-400 rounded-full text-sm border border-teal-200 dark:border-teal-700">
-                      SE Internships
+                      Freelance Projects
                     </span>
                     <span className="px-3 py-1 bg-teal-50 dark:bg-teal-900/20 text-teal-600 dark:text-teal-400 rounded-full text-sm border border-teal-200 dark:border-teal-700">
                       Collaborations
                     </span>
+                    
+
                     
                   </div>
                 </CardContent>
