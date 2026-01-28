@@ -35,7 +35,7 @@ export default function ExperienceSection() {
         "Internship · Colombo, Western Province, Sri Lanka · On-site",
       details:
         "Working as a Software Engineer Intern, developing and maintaining web applications using modern technologies. Contributing to full-stack development projects and gaining hands-on experience in professional software development practices. Key responsibilities include: Front End Software Development, Back End Software Development, Full Stack Software Development, Web Development, and Database Administration.",
-      skills: ["Vue.js", "MYSQL", "Spring Boot"],
+      skills: ["Vue.js", "MySQL", "Spring Boot"],
       year: "2026 jan - Present",
       type: "Internship",
     },
