@@ -45,6 +45,19 @@ export default function ProjectsPage() {
 
   const projects = [
     {
+      id: 23,
+      title: "SafeLanka - Disaster Management Platform",
+      description: "A comprehensive disaster management platform for real-time monitoring and response coordination",
+      longDescription: "Why I Built This: I developed SafeLanka to address the critical need for effective disaster management in Sri Lanka. The platform provides real-time monitoring of natural disasters, facilitates communication between emergency responders and affected communities, and offers resources for disaster preparedness. This project was motivated by the increasing frequency of natural disasters and the importance of leveraging technology to enhance response efforts and save lives.",
+      technologies: ["React.js", "Node.js", "MongoDB", "Express.js","Socket.io"],
+      image: "safelanka.png",
+      category: "Full Stack",
+      year: "2026",
+      demo: "https://heapified-devthon-3-0.vercel.app/",
+      github: "https://github.com/ravindu422/Heapified_Devthon_3.0",
+    },
+    
+    {
       id: 22,
       title: "Watchlist – Movie Tracking & Rating Web App (MERN Stack)🎥",
       description: "A web application for tracking and rating movies with user authentication",
