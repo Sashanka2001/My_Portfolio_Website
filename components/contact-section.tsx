@@ -113,23 +113,23 @@ export default function ContactSection() {
         "bg-blue-900/25 text-blue-100 border-blue-300/20 hover:bg-blue-900/35",
       iconColor: "bg-blue-500/20 text-blue-200",
     },
-    {
+     {
       id: 2,
-      name: "GitHub (Work)",
-      icon: Github,
-      href: "https://github.com/IT23231528chamudi",
-      description: "View my work projects",
-       color:
-        "bg-slate-800/75 text-slate-200 border-slate-500/25 hover:bg-slate-700/80",
-      iconColor: "bg-slate-700/60 text-slate-200",
-    },
-    {
-      id: 3,
       name: "GitHub (Personal)",
       icon: Github,
       href: "https://github.com/Sashanka2001",
       description: "Explore my personal projects",
       color:
+        "bg-slate-800/75 text-slate-200 border-slate-500/25 hover:bg-slate-700/80",
+      iconColor: "bg-slate-700/60 text-slate-200",
+    },
+    {
+      id: 3,
+      name: "GitHub (Work)",
+      icon: Github,
+      href: "https://github.com/IT23231528chamudi",
+      description: "View my work projects",
+       color:
         "bg-slate-800/75 text-slate-200 border-slate-500/25 hover:bg-slate-700/80",
       iconColor: "bg-slate-700/60 text-slate-200",
     },
