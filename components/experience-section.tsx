@@ -105,12 +105,9 @@ export default function ExperienceSection() {
     {
       id: 1,
       title: "Full Stack Engineer - Intern",
-      organization:
-        "Ministry of Finance - Information Technology Management Department (ITMD)",
-      description:
-        "Internship · Colombo, Western Province, Sri Lanka · On-site",
-      details:
-        "Working as a Software Engineer Intern, developing and maintaining web applications using modern technologies. Contributing to full-stack development projects and gaining hands-on experience in professional software development practices. Key responsibilities include: Front End Software Development, Back End Software Development, Full Stack Software Development, Web Development, and Database Administration.",
+      organization: "Ministry of Finance - Information Technology Management Department (ITMD)",
+      description: "Internship · Colombo, Western Province, Sri Lanka · On-site",
+      details: "Working as a Software Engineer Intern, developing and maintaining web applications using modern technologies. Contributing to full-stack development projects and gaining hands-on experience in professional software development practices. Key responsibilities include: Front End Software Development, Back End Software Development, Full Stack Software Development, Web Development, and Database Administration.",
       skills: ["Vue.js", "MySQL", "Spring Boot"],
       year: "2026 jan - Present",
       type: "Internship",
@@ -120,8 +117,7 @@ export default function ExperienceSection() {
       title: "Computer Science Student",
       organization: "SLIIT",
       description: "Currently pursuing Bachelor's degree in Computer Science",
-      details:
-        "Actively learning and applying computer science principles through coursework and personal projects. Focus areas include software development, algorithms, data structures, and web technologies.",
+      details: "Actively learning and applying computer science principles through coursework and personal projects. Focus areas include software development, algorithms, data structures, and web technologies.",
       skills: ["Academic Projects", "Team Collaboration", "Problem Solving"],
       year: "2023 July - Present",
       type: "Education",
