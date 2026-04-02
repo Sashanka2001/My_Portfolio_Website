@@ -4,7 +4,7 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Github, ExternalLink, Code2 } from "lucide-react"
 import Link from "next/link"
 
@@ -14,6 +14,7 @@ export default function ProjectsPage() {
   const [showAllProjects, setShowAllProjects] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [isVisible, setIsVisible] = useState(false)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
 
   // Fade-in observer for header animation
   useEffect(() => {
@@ -31,6 +32,80 @@ export default function ProjectsPage() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext("2d")
+    if (!ctx) return
+
+    const setCanvasSize = () => {
+      canvas.width = window.innerWidth
+      canvas.height = Math.max(window.innerHeight, document.body.scrollHeight)
+    }
+
+    setCanvasSize()
+
+    const particles: { x: number; y: number; vx: number; vy: number; r: number; alpha: number }[] = []
+    for (let i = 0; i < 110; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.2,
+        vy: (Math.random() - 0.5) * 0.2,
+        r: Math.random() * 1.5 + 0.5,
+        alpha: Math.random() * 0.4 + 0.2,
+      })
+    }
+
+    let animId = 0
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      for (const p of particles) {
+        p.x += p.vx
+        p.y += p.vy
+
+        if (p.x < 0) p.x = canvas.width
+        if (p.x > canvas.width) p.x = 0
+        if (p.y < 0) p.y = canvas.height
+        if (p.y > canvas.height) p.y = 0
+
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(94,234,212,${p.alpha})`
+        ctx.fill()
+      }
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x
+          const dy = particles[i].y - particles[j].y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+
+          if (dist < 130) {
+            ctx.beginPath()
+            ctx.moveTo(particles[i].x, particles[i].y)
+            ctx.lineTo(particles[j].x, particles[j].y)
+            ctx.strokeStyle = `rgba(94,234,212,${0.09 * (1 - dist / 130)})`
+            ctx.lineWidth = 0.5
+            ctx.stroke()
+          }
+        }
+      }
+
+      animId = requestAnimationFrame(draw)
+    }
+
+    draw()
+    window.addEventListener("resize", setCanvasSize)
+
+    return () => {
+      cancelAnimationFrame(animId)
+      window.removeEventListener("resize", setCanvasSize)
+    }
+  }, [])
+
   const scrollToSection = (sectionId: string) => {
     if (sectionId === "home") {
       window.location.href = "/"
@@ -46,7 +121,7 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 23,
-      title: "SafeLanka - Disaster Management Platform",
+      title: "SafeLanka - Disaster Management Platform ☔",
       description: "A comprehensive disaster management platform for real-time monitoring and response coordination",
       longDescription: "Why I Built This: I developed SafeLanka to address the critical need for effective disaster management in Sri Lanka. The platform provides real-time monitoring of natural disasters, facilitates communication between emergency responders and affected communities, and offers resources for disaster preparedness. This project was motivated by the increasing frequency of natural disasters and the importance of leveraging technology to enhance response efforts and save lives.",
       technologies: ["React.js", "Node.js", "MongoDB", "Express.js","Socket.io"],
@@ -359,11 +434,11 @@ export default function ProjectsPage() {
   const displayedProjects = showAllProjects ? filteredProjects : filteredProjects.slice(0, 6)
 
   const bgColors = [
-    "bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10",
-    "bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/10 dark:to-red-900/10",
-    "bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/10 dark:to-cyan-900/10",
-    "bg-gradient-to-br from-green-50 to-lime-50 dark:from-green-900/10 dark:to-lime-900/10",
-    "bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/10 dark:to-rose-900/10",
+    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-indigo-900/30 border border-indigo-200/10",
+    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-orange-900/30 border border-orange-200/10",
+    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-cyan-900/30 border border-cyan-200/10",
+    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-lime-900/30 border border-lime-200/10",
+    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-rose-900/30 border border-rose-200/10",
   ]
 
   const hoverGlowColors = [
@@ -375,7 +450,11 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen relative overflow-hidden">
+      <div className="absolute inset-0 z-0 bg-[#080e18]"></div>
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_50%,rgba(20,80,80,0.18)_0%,transparent_70%),radial-gradient(ellipse_60%_80%_at_80%_20%,rgba(10,40,80,0.2)_0%,transparent_70%)]"></div>
+      <canvas ref={canvasRef} className="absolute inset-0 z-[1] pointer-events-none" />
+
       <Navigation
         activeSection={activeSection}
         isMenuOpen={isMenuOpen}
@@ -383,7 +462,7 @@ export default function ProjectsPage() {
         scrollToSection={scrollToSection}
       />
 
-      <main className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <main className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
         {/* Header with fade-in animation */}
         <section
           id="projects-header"
@@ -391,11 +470,11 @@ export default function ProjectsPage() {
             isVisible ? "opacity-100" : "opacity-0 translate-y-6"
           }`}
         >
-          <h3 className="text-4xl md:text-6xl font-bold text-slate-800 dark:text-slate-100 bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent mb-4">
+          <h3 className="text-4xl md:text-6xl font-bold text-slate-100 bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-4">
             My Projects
           </h3>
           <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-600 mx-auto mb-6 origin-left scale-x-100 transition-transform duration-700"></div>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             A collection of projects I've worked on, showcasing my skills in web development, full-stack
             applications, and modern technologies.
           </p>
@@ -410,7 +489,7 @@ export default function ProjectsPage() {
               className={`px-6 py-2 rounded-full transition-colors font-semibold ${
                 selectedCategory === category
                   ? "bg-teal-600 text-white shadow-lg"
-                  : "bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600"
+                  : "bg-slate-800/70 text-slate-300 border border-slate-600/50 hover:bg-slate-700/80 hover:text-teal-300"
               }`}
             >
               {category}
@@ -419,7 +498,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Projects Grid */}
-        <div className="bg-white rounded-3xl p-12 shadow-xl mb-20">
+        <div className="bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl rounded-3xl p-12 shadow-[0_30px_90px_rgba(0,0,0,0.5)] mb-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {displayedProjects.map((project, index) => (
               <Card
@@ -437,10 +516,10 @@ export default function ProjectsPage() {
 
                 <CardContent className="p-6 relative z-10">
                   <div className="flex items-start justify-between mb-3">
-                    <div className="w-10 h-10 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center shadow-md">
-                      <Code2 className="w-5 h-5 text-teal-600" />
+                    <div className="w-10 h-10 bg-slate-800/80 rounded-full flex items-center justify-center shadow-md border border-slate-600/40">
+                      <Code2 className="w-5 h-5 text-teal-300" />
                     </div>
-                    <span className="text-xs bg-white/80 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-1 rounded-full">
+                    <span className="text-xs bg-slate-800/85 text-slate-300 px-2 py-1 rounded-full border border-slate-600/30">
                       {project.year}
                     </span>
                   </div>
@@ -455,17 +534,17 @@ export default function ProjectsPage() {
                     />
                   </div>
 
-                  <h4 className="font-semibold text-slate-800 dark:text-white mb-2 text-sm leading-tight">
+                  <h4 className="font-semibold text-slate-100 mb-2 text-sm leading-tight">
                     {project.title}
                   </h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-3">{project.description}</p>
+                  <p className="text-xs text-slate-300 mb-3">{project.description}</p>
 
                   {/* Technologies Tags */}
                   <div className="flex flex-wrap gap-1 mb-3">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-md border border-blue-100"
+                        className="px-2 py-1 bg-slate-800/80 text-cyan-200 text-xs rounded-md border border-slate-600/40"
                       >
                         {tech}
                       </span>
@@ -479,7 +558,7 @@ export default function ProjectsPage() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-teal-600 text-xs font-medium hover:text-teal-800 transition-colors flex-1"
+                        className="inline-flex items-center text-teal-300 text-xs font-medium hover:text-teal-200 transition-colors flex-1"
                       >
                         <Github className="w-3 h-3 mr-1" />
                         Code
@@ -496,7 +575,7 @@ export default function ProjectsPage() {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-teal-600 text-xs font-medium hover:text-teal-800 transition-colors flex-1"
+                        className="inline-flex items-center text-teal-300 text-xs font-medium hover:text-teal-200 transition-colors flex-1"
                       >
                         <ExternalLink className="w-3 h-3 mr-1" />
                         Demo
@@ -538,7 +617,9 @@ export default function ProjectsPage() {
         </div>
       </main>
 
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </div>
   )
 }
