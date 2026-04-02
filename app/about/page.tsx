@@ -192,7 +192,7 @@ export default function AboutPage() {
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="w-56 mx-auto bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center text-white text-6xl font-bold mb-6 overflow-hidden">
                   <img
-                    src="Profilepic.jpg"
+                    src="Prof.png"
                     alt="Professional portrait"
                     className="w-full h-full object-cover rounded-full"
                   />
