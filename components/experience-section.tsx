@@ -104,7 +104,7 @@ export default function ExperienceSection() {
   const experiences = [
     {
       id: 1,
-      title: "Software Engineer Intern",
+      title: "Full Stack Engineer - Intern",
       organization:
         "Ministry of Finance - Information Technology Management Department (ITMD)",
       description:
