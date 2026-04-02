@@ -304,7 +304,7 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
                 Computer Science Undergraduate
               </p>
               <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", lineHeight: "1.75", fontFamily: "'Inter', sans-serif", fontStyle: "normal", fontWeight: 400, }}>
-                Crafting digital experiences with precision — where clean engineering meets considered design.
+                Crafting digital experiences with precision where clean engineering meets considered design.
               </p>
             </div>
 
