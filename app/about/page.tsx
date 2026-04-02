@@ -329,7 +329,7 @@ export default function AboutPage() {
                     and human-computer interaction.
                   </p>
                   <p>
-                    I specialize in technologies like <b>React, Next.js, Node.js(Express), Spring Boot and SQL</b> and have
+                    I specialize in technologies like <b>React, Next.js, Node.js(Express), Vue.js, Spring Boot and SQL</b> and have
                     also explored lower-level programming using C, Fortran, and Lex/Yacc. My academic and project work
                     spans <b>Web Development, IoT-based applications, UI/UX design, compiler construction, and game development.</b> I'm
                     familiar with tools like Figma, Jira, and methodologies such as Agile and Scrum.
@@ -354,7 +354,7 @@ export default function AboutPage() {
                     <div className="text-center p-4 rounded-lg border border-blue-200/15 bg-blue-900/20 hover:bg-blue-900/30 transition-colors">
                       <Code className="w-8 h-8 mx-auto mb-2 text-blue-300" />
                       <h4 className="font-semibold text-slate-100 mb-1">Frontend</h4>
-                      <p className="text-sm text-slate-300">React, Next.js</p>
+                      <p className="text-sm text-slate-300">React, Next.js, Vue.js</p>
                     </div>
                     <div className="text-center p-4 rounded-lg border border-green-200/15 bg-green-900/20 hover:bg-green-900/30 transition-colors">
                       <Database className="w-8 h-8 mx-auto mb-2 text-green-300" />
