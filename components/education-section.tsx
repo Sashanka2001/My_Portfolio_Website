@@ -73,44 +73,40 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="py-20 px-6 sm:px-10 lg:px-20 bg-white dark:bg-slate-800 relative overflow-hidden"
+      className="py-20 px-6 sm:px-10 lg:px-20 relative overflow-hidden"
     >
-      {/* Animated Background Elements */}
+      {/* Projects-style dark background with square grid */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-r from-purple-400/10 to-blue-400/10 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute bottom-20 right-10 w-56 h-56 bg-gradient-to-r from-teal-400/10 to-green-400/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-pink-400/10 to-orange-400/10 rounded-full blur-2xl animate-float"
-          style={{ animationDelay: "1s" }}
-        ></div>
+        <div className="absolute inset-0 z-0 bg-[#080e18]"></div>
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_50%,rgba(20,80,80,0.18)_0%,transparent_70%),radial-gradient(ellipse_60%_80%_at_80%_20%,rgba(10,40,80,0.2)_0%,transparent_70%)]"></div>
+        <div className="absolute inset-0 z-0 opacity-25 bg-[linear-gradient(rgba(148,163,184,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.15)_1px,transparent_1px)] bg-[size:34px_34px]"></div>
+        <div className="absolute inset-0 z-0 opacity-10 bg-[linear-gradient(rgba(45,212,191,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(45,212,191,0.35)_1px,transparent_1px)] bg-[size:170px_170px]"></div>
       </div>
+
       <div
         className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
       >
-        <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100 gradient-text mb-4">Education</h2>
+        <h2 className="text-4xl font-bold text-slate-100 gradient-text mb-4">Education</h2>
         <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-6 animate-scale-in"></div>
-        <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+        <p className="text-xl text-slate-300 max-w-3xl mx-auto">
           My academic background and educational qualifications from university to school level.
         </p>
       </div>
 
       {/* Education Grid - Certificate Style */}
       <div
-        className={`bg-white dark:bg-slate-800 rounded-3xl p-12 shadow-2xl mb-8 relative overflow-hidden transition-all duration-1000 ${isVisible ? "animate-slide-up animate-delay-200" : "opacity-0"}`}
+        className={`bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl rounded-3xl p-12 shadow-[0_30px_90px_rgba(0,0,0,0.5)] mb-8 relative overflow-hidden transition-all duration-1000 ${isVisible ? "animate-slide-up animate-delay-200" : "opacity-0"}`}
       >
         {/* Decorative Elements */}
-        <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-purple-400/10 to-transparent rounded-full blur-2xl"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-400/10 to-transparent rounded-full blur-2xl"></div>
+        <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-purple-400/20 to-transparent rounded-full blur-2xl"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-400/20 to-transparent rounded-full blur-2xl"></div>
         <div className="grid gap-6 mb-8">
           {displayedEducation.map((edu, index) => {
             const IconComponent = edu.icon
             return (
               <Card
                 key={edu.id}
-                className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover dark:bg-slate-700 border-0 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/10 dark:to-blue-900/10 ${index < 1 ? "animate-bounce-in" : ""} overflow-hidden relative`}
+                className={`group hover:shadow-[0_24px_48px_rgba(8,145,178,0.24)] transition-all duration-500 hover-lift card-hover border border-cyan-200/10 bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-purple-900/25 ${index < 1 ? "animate-bounce-in" : ""} overflow-hidden relative`}
                 style={index < 1 ? { animationDelay: `${0.3 + index * 0.1}s` } : {}}
               >
                 {/* Card Glow Effect */}
@@ -120,43 +116,42 @@ export default function EducationSection() {
                     <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 animate-float">
                       <IconComponent className="w-7 h-7 text-white" />
                     </div>
-                    <span className="text-xs bg-slate-100 dark:bg-slate-600 text-slate-600 dark:text-slate-300 px-3 py-2 rounded-full font-medium">
+                    <span className="text-xs bg-slate-800/85 text-slate-200 px-3 py-2 rounded-full font-medium border border-slate-600/40">
                       {edu.year}
                     </span>
                   </div>
 
-                  <h4 className="font-bold text-slate-800 dark:text-slate-100 mb-3 text-xl leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-800 group-hover:to-slate-600 dark:group-hover:from-slate-100 dark:group-hover:to-slate-300 transition-all duration-300">
+                  <h4 className="font-bold text-slate-100 mb-3 text-xl leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-100 group-hover:to-slate-300 transition-all duration-300">
                     {edu.degree}
                   </h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-3 font-semibold">{edu.institution}</p>
+                  <p className="text-sm text-slate-200 mb-3 font-semibold">{edu.institution}</p>
 
                   {edu.expectedGraduation ? (
-                    <p className="text-xs text-slate-600 dark:text-slate-300 mb-3">
+                    <p className="text-xs text-slate-300 mb-3">
                       {edu.status} • Expected Graduation: {edu.expectedGraduation}
                     </p>
                   ) : (
-                    <p className="text-xs text-slate-600 dark:text-slate-300 mb-3">
+                    <p className="text-xs text-slate-300 mb-3">
                       {edu.status} {edu.grade && `• Grade: ${edu.grade}`}
                     </p>
                   )}
 
                   {edu.stream && (
-                    <p className="text-xs text-slate-600 dark:text-slate-300 mb-3 font-medium">{edu.stream}</p>
+                    <p className="text-xs text-slate-300 mb-3 font-medium">{edu.stream}</p>
                   )}
 
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-4">{edu.description}</p>
+                  <p className="text-xs text-slate-300 mb-4">{edu.description}</p>
 
                   {edu.coreSubjects && (
                     <div className="mb-4">
-                      <h5 className="font-semibold text-slate-800 dark:text-slate-100 mb-3 text-sm">
+                      <h5 className="font-semibold text-slate-100 mb-3 text-sm">
                         {edu.type === "University" ? "Core Subjects" : "Subjects"}
                       </h5>
                       <div className="flex flex-wrap gap-2">
                         {edu.coreSubjects.map((subject, subjectIndex) => (
                           <span
                             key={subjectIndex}
-                            className={`px-3 py-2 bg-white/80 dark:bg-slate-600/50 text-slate-700 dark:text-slate-300 text-sm rounded-xl border border-slate-200/50 dark:border-slate-500/30 font-medium hover:scale-105 transition-transform duration-200 ${index < 1 ? "animate-fade-in-up" : ""} backdrop-blur-sm`}
-                            style={index < 1 ? { animationDelay: `${0.5 + subjectIndex * 0.05}s` } : {}}
+                            className={`px-3 py-2 bg-slate-800/70 text-slate-200 text-sm rounded-xl border border-slate-500/35 font-medium hover:scale-105 transition-transform duration-200 ${index < 1 ? "animate-fade-in-up" : ""} backdrop-blur-sm`}
                           >
                             {subject}
                           </span>
@@ -178,7 +173,7 @@ export default function EducationSection() {
           <div className="text-center">
             <Button
               onClick={() => setShowAllEducation(!showAllEducation)}
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 hover-lift btn-ripple animate-glow group"
+              className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-400 hover:to-blue-400 text-slate-950 px-8 py-4 rounded-2xl font-semibold tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 hover-lift btn-ripple animate-glow group"
             >
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:rotate-180 transition-transform duration-500">
