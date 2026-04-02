@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ChevronDown, ChevronUp, Code, Zap, Globe, Cpu, Layers, Wrench, Sparkles } from "lucide-react"
 
 const skillIcons: Record<string, string> = {
@@ -25,6 +25,82 @@ export default function SkillsSection() {
   const [showAllSkills, setShowAllSkills] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext("2d")
+    if (!ctx) return
+
+    const setCanvasSize = () => {
+      const section = document.getElementById("skills")
+      canvas.width = window.innerWidth
+      canvas.height = section?.offsetHeight || window.innerHeight
+    }
+
+    setCanvasSize()
+
+    const particles: { x: number; y: number; vx: number; vy: number; r: number; alpha: number }[] = []
+    for (let i = 0; i < 95; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+        r: Math.random() * 1.6 + 0.5,
+        alpha: Math.random() * 0.45 + 0.25,
+      })
+    }
+
+    let animId = 0
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      for (const p of particles) {
+        p.x += p.vx
+        p.y += p.vy
+
+        if (p.x < 0) p.x = canvas.width
+        if (p.x > canvas.width) p.x = 0
+        if (p.y < 0) p.y = canvas.height
+        if (p.y > canvas.height) p.y = 0
+
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(94,234,212,${p.alpha})`
+        ctx.fill()
+      }
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x
+          const dy = particles[i].y - particles[j].y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+
+          if (dist < 130) {
+            ctx.beginPath()
+            ctx.moveTo(particles[i].x, particles[i].y)
+            ctx.lineTo(particles[j].x, particles[j].y)
+            ctx.strokeStyle = `rgba(94,234,212,${0.11 * (1 - dist / 130)})`
+            ctx.lineWidth = 0.5
+            ctx.stroke()
+          }
+        }
+      }
+
+      animId = requestAnimationFrame(draw)
+    }
+
+    draw()
+    window.addEventListener("resize", setCanvasSize)
+
+    return () => {
+      cancelAnimationFrame(animId)
+      window.removeEventListener("resize", setCanvasSize)
+    }
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -144,13 +220,13 @@ export default function SkillsSection() {
 
   const getCategoryBg = (index: number) => {
     const backgrounds = [
-      "bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10",
-      "bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900/10 dark:to-teal-900/10",
-      "bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/10 dark:to-red-900/10",
-      "bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/10 dark:to-pink-900/10",
-      "bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/10 dark:to-cyan-900/10",
-      "bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/10 dark:to-blue-900/10",
-      "bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/10 dark:to-rose-900/10",
+      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-indigo-900/35 border border-indigo-200/15 backdrop-blur-md",
+      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-emerald-900/35 border border-emerald-200/15 backdrop-blur-md",
+      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-orange-900/35 border border-orange-200/15 backdrop-blur-md",
+      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-fuchsia-900/35 border border-fuchsia-200/15 backdrop-blur-md",
+      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-cyan-900/35 border border-cyan-200/15 backdrop-blur-md",
+      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-blue-900/35 border border-blue-200/15 backdrop-blur-md",
+      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-rose-900/35 border border-rose-200/15 backdrop-blur-md",
     ]
     return backgrounds[index % backgrounds.length]
   }
@@ -158,22 +234,14 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="py-20 px-6 sm:px-10 lg:px-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden"
+      className="py-20 px-6 sm:px-10 lg:px-20 relative overflow-hidden"
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute bottom-20 right-10 w-56 h-56 bg-gradient-to-r from-teal-400/10 to-green-400/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-pink-400/10 to-orange-400/10 rounded-full blur-2xl animate-float"
-          style={{ animationDelay: "1s" }}
-        ></div>
-      </div>
+      {/* Hero-style animated background */}
+      <div className="absolute inset-0 z-0 bg-[#080e18]"></div>
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_50%,rgba(20,80,80,0.18)_0%,transparent_70%),radial-gradient(ellipse_60%_80%_at_80%_20%,rgba(10,40,80,0.2)_0%,transparent_70%)]"></div>
+      <canvas ref={canvasRef} className="absolute inset-0 z-[1] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-6xl mx-auto relative z-10">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
         >
@@ -190,11 +258,11 @@ export default function SkillsSection() {
 
         {/* Skills Grid - Enhanced Certificate Style */}
         <div
-          className={`bg-white dark:bg-slate-800 rounded-3xl p-12 shadow-2xl mb-8 relative overflow-hidden transition-all duration-1000 ${isVisible ? "animate-slide-up animate-delay-200" : "opacity-0"}`}
+          className={`bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl rounded-3xl p-12 shadow-[0_30px_90px_rgba(0,0,0,0.5)] mb-8 relative overflow-hidden transition-all duration-1000 ${isVisible ? "animate-slide-up animate-delay-200" : "opacity-0"}`}
         >
           {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-teal-400/10 to-transparent rounded-full blur-2xl"></div>
-          <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-blue-400/10 to-transparent rounded-full blur-2xl"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-teal-400/20 to-transparent rounded-full blur-2xl"></div>
+          <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-blue-400/20 to-transparent rounded-full blur-2xl"></div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 relative">
             {displayedSkills.map(([category, skillList], categoryIndex) => {
@@ -204,7 +272,7 @@ export default function SkillsSection() {
               return (
                 <Card
                   key={category}
-                  className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover dark:bg-slate-700 border-0 ${getCategoryBg(categoryIndex)} ${categoryIndex < 3 ? "animate-bounce-in" : ""} overflow-hidden relative`}
+                  className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover ${getCategoryBg(categoryIndex)} ${categoryIndex < 3 ? "animate-bounce-in" : ""} overflow-hidden relative`}
                   style={categoryIndex < 3 ? { animationDelay: `${0.3 + categoryIndex * 0.1}s` } : {}}
                   onMouseEnter={() => setHoveredCategory(category)}
                   onMouseLeave={() => setHoveredCategory(null)}
