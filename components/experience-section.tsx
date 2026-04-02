@@ -2,10 +2,86 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Briefcase } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function ExperienceSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const setCanvasSize = () => {
+      const section = document.getElementById("experience");
+      canvas.width = window.innerWidth;
+      canvas.height = section?.offsetHeight || window.innerHeight;
+    };
+
+    setCanvasSize();
+
+    const particles: { x: number; y: number; vx: number; vy: number; r: number; alpha: number }[] = [];
+    for (let i = 0; i < 95; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+        r: Math.random() * 1.6 + 0.5,
+        alpha: Math.random() * 0.45 + 0.25,
+      });
+    }
+
+    let animId = 0;
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (const p of particles) {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(94,234,212,${p.alpha})`;
+        ctx.fill();
+      }
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 130) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(94,234,212,${0.11 * (1 - dist / 130)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+
+      animId = requestAnimationFrame(draw);
+    };
+
+    draw();
+    window.addEventListener("resize", setCanvasSize);
+
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener("resize", setCanvasSize);
+    };
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -55,50 +131,42 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="py-20 px-6 sm:px-10 lg:px-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden"
+      className="py-20 px-6 sm:px-10 lg:px-20 relative overflow-hidden"
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-r from-teal-400/10 to-blue-400/10 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute bottom-20 right-10 w-56 h-56 bg-gradient-to-r from-green-400/10 to-purple-400/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-orange-400/10 to-pink-400/10 rounded-full blur-2xl animate-float"
-          style={{ animationDelay: "1s" }}
-        ></div>
-      </div>
+      {/* Hero-style animated background */}
+      <div className="absolute inset-0 z-0 bg-[#080e18]"></div>
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_50%,rgba(20,80,80,0.18)_0%,transparent_70%),radial-gradient(ellipse_60%_80%_at_80%_20%,rgba(10,40,80,0.2)_0%,transparent_70%)]"></div>
+      <canvas ref={canvasRef} className="absolute inset-0 z-[1] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-6xl mx-auto relative z-10">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
         >
-          <h2 className="text-4xl font-bold text-slate-800 dark:text-slate-100 gradient-text mb-4">
+          <h2 className="text-4xl font-bold text-slate-100 gradient-text mb-4">
             Experience
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in"></div>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             My educational journey and learning experiences in computer science.
           </p>
         </div>
 
         {/* Experience Grid - Enhanced Certificate Style */}
         <div
-          className={`bg-white dark:bg-slate-800 rounded-3xl p-12 shadow-2xl relative overflow-hidden transition-all duration-1000 ${isVisible ? "animate-slide-up animate-delay-200" : "opacity-0"}`}
+          className={`bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl rounded-3xl p-12 shadow-[0_30px_90px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all duration-1000 ${isVisible ? "animate-slide-up animate-delay-200" : "opacity-0"}`}
         >
           {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-teal-400/10 to-transparent rounded-full blur-2xl"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-400/10 to-transparent rounded-full blur-2xl"></div>
+          <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-teal-400/20 to-transparent rounded-full blur-2xl"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-400/20 to-transparent rounded-full blur-2xl"></div>
 
           <div className="grid gap-6 relative">
             {experiences.map((experience, index) => (
               <Card
                 key={experience.id}
-                className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover dark:bg-slate-700 border-0 animate-bounce-in overflow-hidden relative ${
+                className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover border border-cyan-200/10 animate-bounce-in overflow-hidden relative ${
                   experience.type === "Internship"
-                    ? "bg-gradient-to-br from-pink-50 to-purple-50 dark:from-pink-900/10 dark:to-purple-900/10"
-                    : "bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-900/10 dark:to-blue-900/10"
+                    ? "bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-fuchsia-900/25"
+                    : "bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-cyan-900/25"
                 }`}
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
@@ -126,21 +194,21 @@ export default function ExperienceSection() {
                         <GraduationCap className="w-7 h-7 text-white" />
                       )}
                     </div>
-                    <span className="text-xs bg-slate-100 dark:bg-slate-600 text-slate-600 dark:text-slate-300 px-3 py-2 rounded-full font-medium">
+                    <span className="text-xs bg-slate-800/85 text-slate-200 px-3 py-2 rounded-full font-medium border border-slate-600/40">
                       {experience.year}
                     </span>
                   </div>
 
-                  <h4 className="font-bold text-slate-800 dark:text-slate-100 mb-3 text-xl leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-800 group-hover:to-slate-600 dark:group-hover:from-slate-100 dark:group-hover:to-slate-300 transition-all duration-300">
+                  <h4 className="font-bold text-slate-100 mb-3 text-xl leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-100 group-hover:to-slate-300 transition-all duration-300">
                     {experience.title}
                   </h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-3 font-semibold">
+                  <p className="text-sm text-slate-200 mb-3 font-semibold">
                     {experience.organization}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                  <p className="text-sm text-slate-300 mb-4">
                     {experience.description}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                  <p className="text-sm text-slate-300 mb-6 leading-relaxed">
                     {experience.details}
                   </p>
 
@@ -149,7 +217,7 @@ export default function ExperienceSection() {
                     {experience.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-2 bg-white/80 dark:bg-slate-600/50 text-slate-700 dark:text-slate-300 text-sm rounded-xl border border-slate-200/50 dark:border-slate-500/30 font-medium hover:scale-105 transition-transform duration-200 animate-fade-in-up backdrop-blur-sm"
+                        className="px-3 py-2 bg-slate-800/70 text-slate-200 text-sm rounded-xl border border-slate-500/35 font-medium hover:scale-105 transition-transform duration-200 animate-fade-in-up backdrop-blur-sm"
                         style={{
                           animationDelay: `${0.5 + skillIndex * 0.05}s`,
                         }}
