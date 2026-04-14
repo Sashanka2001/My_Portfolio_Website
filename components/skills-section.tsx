@@ -146,7 +146,7 @@ export default function SkillsSection() {
       "C# (Learning)"
     ],
 
-       "Dtabase": [
+       "Database": [
     "MySQL",
     "MongoDB",
     "Firebase",
@@ -220,13 +220,13 @@ export default function SkillsSection() {
 
   const getCategoryBg = (index: number) => {
     const backgrounds = [
-      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-indigo-900/35 border border-indigo-200/15 backdrop-blur-md",
-      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-emerald-900/35 border border-emerald-200/15 backdrop-blur-md",
-      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-orange-900/35 border border-orange-200/15 backdrop-blur-md",
-      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-fuchsia-900/35 border border-fuchsia-200/15 backdrop-blur-md",
-      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-cyan-900/35 border border-cyan-200/15 backdrop-blur-md",
-      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-blue-900/35 border border-blue-200/15 backdrop-blur-md",
-      "bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-rose-900/35 border border-rose-200/15 backdrop-blur-md",
+      "bg-slate-900/55 border border-indigo-300/20 backdrop-blur-xl",
+      "bg-slate-900/55 border border-emerald-300/20 backdrop-blur-xl",
+      "bg-slate-900/55 border border-orange-300/20 backdrop-blur-xl",
+      "bg-slate-900/55 border border-fuchsia-300/20 backdrop-blur-xl",
+      "bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl",
+      "bg-slate-900/55 border border-blue-300/20 backdrop-blur-xl",
+      "bg-slate-900/55 border border-rose-300/20 backdrop-blur-xl",
     ]
     return backgrounds[index % backgrounds.length]
   }
@@ -273,13 +273,12 @@ export default function SkillsSection() {
                 <Card
                   key={category}
                   className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover ${getCategoryBg(categoryIndex)} ${categoryIndex < 3 ? "animate-bounce-in" : ""} overflow-hidden relative`}
-                  style={categoryIndex < 3 ? { animationDelay: `${0.3 + categoryIndex * 0.1}s` } : {}}
                   onMouseEnter={() => setHoveredCategory(category)}
                   onMouseLeave={() => setHoveredCategory(null)}
                 >
                   {/* Card Glow Effect */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-r ${getCategoryColor(categoryIndex)} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                    className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-8 transition-opacity duration-500"
                   ></div>
 
                   <CardContent className="p-8 relative">
@@ -287,7 +286,6 @@ export default function SkillsSection() {
                     <div className="flex items-center gap-3 mb-6">
                       <div
                         className={`w-14 h-14 bg-gradient-to-r ${getCategoryColor(categoryIndex)} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 animate-float`}
-                        style={{ animationDelay: `${categoryIndex * 0.2}s` }}
                       >
                         <IconComponent className="w-7 h-7 text-white" />
                       </div>
@@ -307,7 +305,6 @@ export default function SkillsSection() {
                         <div
                           key={skillIndex}
                           className={`group/skill px-3 py-2 bg-white/80 dark:bg-slate-600/50 text-slate-700 dark:text-slate-300 text-sm rounded-xl border border-slate-200/50 dark:border-slate-500/30 flex items-center gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 ${categoryIndex < 3 ? "animate-fade-in-up" : ""} backdrop-blur-sm`}
-                          style={categoryIndex < 3 ? { animationDelay: `${0.5 + skillIndex * 0.05}s` } : {}}
                         >
                           {skillIcons[skill] && (
                             <img
