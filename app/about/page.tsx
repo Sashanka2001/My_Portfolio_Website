@@ -431,7 +431,7 @@ export default function AboutPage() {
             <div className="text-center">
              <Button
   onClick={() => setShowAllCertificates(!showAllCertificates)}
-  className="bg-teal-500 text-slate-950 hover:bg-teal-400 px-6 py-3 rounded-lg shadow-md transition duration-300 flex items-center justify-center mx-auto"
+  className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 hover-lift btn-ripple animate-glow group"
 >
   {showAllCertificates ? (
     <>
