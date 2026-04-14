@@ -459,20 +459,7 @@ export default function AboutPage() {
                 Download Resume
               </Button>
             </Link>
-          </div>  */} 
-           
-
-          {/* Interests */}
-          <div className="bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl rounded-2xl p-8 shadow-[0_30px_90px_rgba(0,0,0,0.5)]">
-            <h3 className="text-2xl font-bold text-slate-100 mb-6 text-center">Areas of Interest</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {interests.map((interest, index) => (
-                <Badge key={index} variant="secondary" className="bg-slate-800/80 text-slate-200 border border-slate-600/40 px-4 py-2">
-                  {interest}
-                </Badge>
-              ))}
-            </div>
-          </div>
+          </div>  */}
         </div>
       </div>
       <Footer />
