@@ -304,7 +304,7 @@ export default function SkillsSection() {
                       {skillList.map((skill, skillIndex) => (
                         <div
                           key={skillIndex}
-                          className={`group/skill px-3 py-2 bg-white/80 dark:bg-slate-600/50 text-slate-700 dark:text-slate-300 text-sm rounded-xl border border-slate-200/50 dark:border-slate-500/30 flex items-center gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 ${categoryIndex < 3 ? "animate-fade-in-up" : ""} backdrop-blur-sm`}
+                          className={`group/skill px-3 py-2 bg-transparent text-slate-200 text-sm rounded-xl border border-white/10 flex items-center gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 ${categoryIndex < 3 ? "animate-fade-in-up" : ""} backdrop-blur-sm hover:bg-white/5 hover:border-white/20`}
                         >
                           {skillIcons[skill] && (
                             <img
