@@ -196,7 +196,7 @@ export default function ContactSection() {
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-400/20 to-transparent rounded-full blur-2xl"></div>
 
            <div className="flex flex-nowrap justify-center gap-4 overflow-x-auto relative">
-            {contactLinks.map((contact, index) => {
+            {contactLinks.map((contact) => {
               const IconComponent = contact.icon
               const ButtonContent = (
                 <span
@@ -209,8 +209,7 @@ export default function ContactSection() {
               return (
                 <Card
                   key={contact.id}
-                  className="group hover:shadow-2xl transition-all duration-500 hover-lift card-hover border border-cyan-200/10 bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-cyan-900/25 animate-bounce-in overflow-hidden relative"
-                  style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+                  className="group hover:shadow-2xl transition-all duration-500 hover-lift card-hover border border-cyan-300/20 bg-slate-900/55 backdrop-blur-xl animate-bounce-in overflow-hidden relative"
                 >
                   {/* Card Glow Effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
@@ -218,7 +217,6 @@ export default function ContactSection() {
                   <CardContent className="p-8 text-center relative">
                     <div
                       className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 animate-float ${contact.iconColor}`}
-                      style={{ animationDelay: `${index * 0.2}s` }}
                     >
                       <IconComponent className="w-8 h-8" />
                     </div>
