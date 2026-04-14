@@ -110,29 +110,37 @@ export default function AboutSection() {
       icon: Code,
       title: "Web Development",
       description: "Full-stack development with modern frameworks",
-      color: "bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400",
-      borderColor: "border-blue-100 dark:border-blue-800",
+      color: "bg-cyan-500/20 text-cyan-400",
+      borderColor: "border-cyan-500/40",
+      titleColor: "text-white",
+      descColor: "text-slate-300",
     },
     {
       icon: Database,
       title: "Database Design",
       description: "Efficient database architecture and optimization",
-      color: "bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400",
-      borderColor: "border-green-100 dark:border-green-800",
+      color: "bg-emerald-500/20 text-emerald-400",
+      borderColor: "border-emerald-500/40",
+      titleColor: "text-white",
+      descColor: "text-slate-300",
     },
     {
       icon: Globe,
       title: "API Development",
       description: "RESTful APIs",
-      color: "bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400",
-      borderColor: "border-purple-100 dark:border-purple-800",
+      color: "bg-violet-500/20 text-violet-400",
+      borderColor: "border-violet-500/40",
+      titleColor: "text-white",
+      descColor: "text-slate-300",
     },
     {
       icon: Smartphone,
       title: "Responsive Design",
       description: "Mobile-first, user-friendly interfaces",
-      color: "bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400",
-      borderColor: "border-orange-100 dark:border-orange-800",
+      color: "bg-amber-500/20 text-amber-400",
+      borderColor: "border-amber-500/40",
+      titleColor: "text-white",
+      descColor: "text-slate-300",
     },
   ]
 
@@ -169,7 +177,7 @@ export default function AboutSection() {
             className={`space-y-6 transition-all duration-1000 ${isVisible ? "animate-fade-in-left animate-delay-200" : "opacity-0"}`}
           >
             {/* Profile Card */}
-            <Card className="group relative overflow-hidden border border-cyan-200/10 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-cyan-900/25 shadow-[0_30px_90px_rgba(0,0,0,0.5)] hover:shadow-[0_35px_100px_rgba(0,0,0,0.55)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01] hover-lift card-hover animate-bounce-in">
+            <Card className="group relative overflow-hidden border border-cyan-300/20 bg-slate-900/55 shadow-[0_30px_90px_rgba(0,0,0,0.5)] hover:shadow-[0_35px_100px_rgba(0,0,0,0.55)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01] hover-lift card-hover animate-bounce-in">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
               <CardContent className="p-8">
                 <div className="mb-6">
@@ -209,7 +217,7 @@ export default function AboutSection() {
             className={`space-y-6 transition-all duration-1000 ${isVisible ? "animate-fade-in-right animate-delay-300" : "opacity-0"}`}
           >
             {/* Skills Grid - Certificate Style */}
-            <div className="relative overflow-hidden rounded-3xl border border-cyan-200/10 bg-slate-900/60 backdrop-blur-xl p-8 shadow-[0_30px_90px_rgba(0,0,0,0.45)] card-hover">
+            <div className="relative overflow-hidden rounded-3xl border border-cyan-300/20 bg-slate-900/55 backdrop-blur-xl p-8 shadow-[0_30px_90px_rgba(0,0,0,0.45)] card-hover">
               <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 to-cyan-900/15"></div>
               <div className="grid grid-cols-2 gap-4">
                 {skills.map((skill, index) => {
@@ -217,7 +225,7 @@ export default function AboutSection() {
                   return (
                     <Card
                       key={index}
-                      className={`relative overflow-hidden border border-white/8 bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-cyan-900/20 hover:shadow-[0_24px_48px_rgba(8,145,178,0.2)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01] hover-lift card-hover animate-bounce-in ${skillDelayClasses[index] ?? ""}`}
+                      className={`relative overflow-hidden border bg-slate-900/55 hover:shadow-[0_24px_48px_rgba(8,145,178,0.2)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.01] hover-lift card-hover animate-bounce-in border-cyan-300/20 ${skillDelayClasses[index] ?? ""}`}
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 hover:opacity-10 transition-opacity duration-500"></div>
                       <CardContent className="p-6 text-center">
@@ -226,8 +234,8 @@ export default function AboutSection() {
                         >
                           <IconComponent className="w-6 h-6" />
                         </div>
-                        <h4 className="font-semibold text-slate-100 mb-2 text-sm">{skill.title}</h4>
-                        <p className="text-xs text-slate-300 leading-relaxed">
+                        <h4 className={`font-semibold mb-2 text-sm ${skill.titleColor}`}>{skill.title}</h4>
+                        <p className={`text-xs leading-relaxed ${skill.descColor}`}>
                           {skill.description}
                         </p>
                       </CardContent>
