@@ -200,9 +200,7 @@ export default function AboutSection() {
                   </p>
                 </div>
 
-              
-
-                <Link href="/about">
+                <Link href="/about" className="inline-block mt-6">
                   <Button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 hover-lift btn-ripple animate-glow group">
                     Learn More About Me
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
