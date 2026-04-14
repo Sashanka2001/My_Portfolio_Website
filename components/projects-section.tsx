@@ -115,11 +115,7 @@ export default function ProjectsSection() {
             {featuredProjects.map((project, index) => (
               <Card
                 key={project.id}
-                className={`group relative overflow-hidden transition-all duration-300 rounded-xl border border-cyan-200/10 ${
-                  index % 2 === 0
-                    ? "bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-fuchsia-900/25"
-                    : "bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-cyan-900/25"
-                } hover:shadow-[0_24px_48px_rgba(8,145,178,0.24)] hover:-translate-y-1`}
+                className="group relative overflow-hidden transition-all duration-300 rounded-xl border border-cyan-300/20 bg-slate-900/55 backdrop-blur-xl hover:shadow-[0_24px_48px_rgba(8,145,178,0.24)] hover:-translate-y-1"
               >
                 {/* Hover Glow */}
                 <div
