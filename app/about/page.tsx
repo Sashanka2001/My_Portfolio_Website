@@ -296,7 +296,7 @@ export default function AboutPage() {
                     <strong>Focus:</strong> Full-Stack Web Development
                   </p>
                   <p>
-                    <strong>Status:</strong> Available for Internships
+                    <strong>Status:</strong> Available for Freelance Projects
                   </p>
                 </div>
               </div>
@@ -366,7 +366,7 @@ export default function AboutPage() {
                     <div className="text-center p-4 rounded-lg border border-purple-200/15 bg-purple-900/20 hover:bg-purple-900/30 transition-colors">
                       <Globe className="w-8 h-8 mx-auto mb-2 text-purple-300" />
                       <h4 className="font-semibold text-slate-100 mb-1">Database</h4>
-                      <p className="text-sm text-slate-300">MYSQL, PostgreSQL, MongoDB, Firebase</p>
+                      <p className="text-sm text-slate-300">SQL, PostgreSQL, MongoDB, Firebase</p>
                     </div>
                     <div className="text-center p-4 rounded-lg border border-orange-200/15 bg-orange-900/20 hover:bg-orange-900/30 transition-colors">
                       <Smartphone className="w-8 h-8 mx-auto mb-2 text-orange-300" />
