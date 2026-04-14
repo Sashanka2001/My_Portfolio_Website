@@ -122,7 +122,7 @@ export default function SkillsSection() {
 
   const skills = {
 
-       " Web Development:": [
+    " Web Development:": [
       "React",
       "Next.js",
       "Vue.js",
@@ -130,27 +130,48 @@ export default function SkillsSection() {
       "ASP.NET Web API",
       "Node.js",
       "Express.js",
-      "Flutter (Learning)",
       "HTML",
+      "CSS",
       "Tailwind CSS",
-      "CSS"
+    ],
+
+    "Mobile Development": [
+       "Flutter (Learning)"
     ],
 
     "Programming Languages": [
       "Java",
-      "C Language",
-      "Python",
+      "C",
       "JavaScript",
       "TypeScript",
-      "R Language",
+      "Python",
+      "Kotlin (Learning)",
+      "R",
       "C# (Learning)"
     ],
 
-       "Database": [
-    "MySQL",
+    "Database": [
+    "SQL",
     "MongoDB",
     "Firebase",
     "PostgreSQL",
+    ],
+
+    
+    "Hosting & Platforms: ": [
+    "Vercel",
+    "AWS (Learning)",
+    "Azure (Learning)",
+    "Render",
+    "Railway",
+    ],
+
+    "Operating Systems" : ["Linux (Ubuntu)"],
+
+    "Testing Frameworks and Tools": [
+      "Postman",
+      "Playwright",
+      "Swagger",
     ],
     
      "Programming Paradigms &  Development Concepts: ": [
@@ -161,14 +182,6 @@ export default function SkillsSection() {
       "Agile",
       "BNF / EBNF",
       "Lex and Yacc",
-    ],
-
-    "Operating Systems" : ["Linux (Ubuntu)"],
-
-    "Cloud Technologies: ": [
-    "Vercel",
-    "AWS (Learning)",
-    "Azure (Learning)",
     ],
 
     "Project management Tools": [
@@ -183,16 +196,11 @@ export default function SkillsSection() {
       "FlutterFlow",
       "VS Code",
       "Intellij",
+      "Android Studio",
     ],
 
     "Game Engines": [
       "Unity",
-    ],
-
-    "Testing Frameworks and Tools": [
-      "Playwright",
-      "Swagger",
-      "Postman",
     ],
 
      "Networking & Security": ["Wireshark (basic protocol analysis and network design)"],
