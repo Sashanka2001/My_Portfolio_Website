@@ -290,7 +290,7 @@ export default function SkillsSection() {
                         <IconComponent className="w-7 h-7 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-slate-800 dark:text-slate-100 text-lg leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-800 group-hover:to-slate-600 dark:group-hover:from-slate-100 dark:group-hover:to-slate-300 transition-all duration-300">
+                        <h4 className="font-bold text-white text-lg leading-tight transition-all duration-300">
                           {category}
                         </h4>
                         <div
