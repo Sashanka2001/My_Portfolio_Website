@@ -385,7 +385,7 @@ export default function AboutPage() {
             <h3 className="text-3xl font-bold text-slate-100 mb-8 text-center">Licenses & Certifications</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {displayedCertificates.map((cert, index) => (
-                <Card key={index} className="border border-cyan-200/10 bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-cyan-900/20 hover:shadow-[0_24px_48px_rgba(8,145,178,0.2)] transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="border border-cyan-300/20 bg-slate-900/55 backdrop-blur-xl hover:shadow-[0_24px_48px_rgba(8,145,178,0.2)] transition-all duration-300 hover:-translate-y-1">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-3">
                        
