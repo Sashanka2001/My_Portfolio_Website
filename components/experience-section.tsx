@@ -118,7 +118,7 @@ export default function ExperienceSection() {
       organization: "SLIIT",
       description: "Currently pursuing Bachelor's degree in Computer Science",
       details: "Actively learning and applying computer science principles through coursework and personal projects. Focus areas include software development, algorithms, data structures, and web technologies.",
-      skills: ["Academic Projects", "Team Collaboration", "Problem Solving"],
+      skills: ["Academic Projects", "Team Collaboration", "Problem Solving", "Researches"],
       year: "2023 July - Present",
       type: "Education",
     },
