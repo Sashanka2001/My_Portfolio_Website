@@ -108,7 +108,7 @@ export default function ExperienceSection() {
       organization: "Ministry of Finance - Information Technology Management Department (ITMD)",
       description: "Internship · Colombo, Western Province, Sri Lanka · On-site",
       details: "Working as a Software Engineer Intern, developing and maintaining web applications using modern technologies. Contributing to full-stack development projects and gaining hands-on experience in professional software development practices. Key responsibilities include: Front End Software Development, Back End Software Development, Full Stack Software Development, Web Development, and Database Administration.",
-      skills: ["Vue.js", "MySQL", "Spring Boot"],
+      skills: ["Vue.js", "SQL", "Spring Boot"],
       year: "2026 jan - Present",
       type: "Internship",
     },
@@ -156,15 +156,10 @@ export default function ExperienceSection() {
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-400/20 to-transparent rounded-full blur-2xl"></div>
 
           <div className="grid gap-6 relative">
-            {experiences.map((experience, index) => (
+            {experiences.map((experience) => (
               <Card
                 key={experience.id}
-                className={`group hover:shadow-2xl transition-all duration-500 hover-lift card-hover border border-cyan-200/10 animate-bounce-in overflow-hidden relative ${
-                  experience.type === "Internship"
-                    ? "bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-fuchsia-900/25"
-                    : "bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-cyan-900/25"
-                }`}
-                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+                className="group hover:shadow-2xl transition-all duration-500 hover-lift card-hover border border-cyan-300/20 bg-slate-900/55 backdrop-blur-xl animate-bounce-in overflow-hidden relative"
               >
                 {/* Card Glow Effect */}
                 <div
@@ -214,9 +209,6 @@ export default function ExperienceSection() {
                       <span
                         key={skillIndex}
                         className="px-3 py-2 bg-slate-800/70 text-slate-200 text-sm rounded-xl border border-slate-500/35 font-medium hover:scale-105 transition-transform duration-200 animate-fade-in-up backdrop-blur-sm"
-                        style={{
-                          animationDelay: `${0.5 + skillIndex * 0.05}s`,
-                        }}
                       >
                         {skill}
                       </span>
