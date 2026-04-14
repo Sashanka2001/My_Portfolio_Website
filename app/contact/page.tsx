@@ -164,10 +164,7 @@ export default function ContactPage() {
                 <img
                   src="https://pagedone.io/asset/uploads/1696245837.png"
                   alt="Contact illustration"
-                  className="relative w-full h-auto rounded-2xl shadow-lg border border-cyan-200/15"
-                  style={{
-                    filter: "hue-rotate(210deg) saturate(0.8) brightness(1.1)",
-                  }}
+                  className="relative w-full h-auto rounded-2xl shadow-lg border border-cyan-200/15 [filter:hue-rotate(210deg)_saturate(0.8)_brightness(1.1)]"
                 />
               </div>
             </div>
@@ -187,8 +184,7 @@ export default function ContactPage() {
                     return (
                       <Card
                         key={info.id}
-                        className="hover:shadow-[0_24px_48px_rgba(8,145,178,0.24)] transition-all duration-300 hover-lift border border-cyan-200/10 bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-cyan-900/25 animate-bounce-in"
-                        style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                        className="hover:shadow-[0_24px_48px_rgba(8,145,178,0.24)] transition-all duration-300 hover-lift border border-cyan-300/20 bg-slate-900/55 backdrop-blur-xl animate-bounce-in"
                       >
                         <CardContent className="p-4">
                           <div className="flex items-center gap-4">
@@ -213,7 +209,7 @@ export default function ContactPage() {
               </div>
 
               {/* Availability - Certificate Style */}
-              <Card className="shadow-[0_30px_90px_rgba(0,0,0,0.5)] hover:shadow-[0_24px_48px_rgba(8,145,178,0.24)] transition-all duration-500 hover-lift card-hover border border-cyan-200/10 bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-fuchsia-900/25 animate-bounce-in animate-delay-700">
+              <Card className="shadow-[0_30px_90px_rgba(0,0,0,0.5)] hover:shadow-[0_24px_48px_rgba(8,145,178,0.24)] transition-all duration-500 hover-lift card-hover border border-cyan-300/20 bg-slate-900/55 backdrop-blur-xl animate-bounce-in animate-delay-700">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 bg-teal-500/20 border border-teal-300/20 rounded-full flex items-center justify-center">
