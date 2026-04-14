@@ -106,8 +106,7 @@ export default function EducationSection() {
             return (
               <Card
                 key={edu.id}
-                className={`group hover:shadow-[0_24px_48px_rgba(8,145,178,0.24)] transition-all duration-500 hover-lift card-hover border border-cyan-200/10 bg-gradient-to-br from-slate-900/90 via-slate-900/75 to-purple-900/25 ${index < 1 ? "animate-bounce-in" : ""} overflow-hidden relative`}
-                style={index < 1 ? { animationDelay: `${0.3 + index * 0.1}s` } : {}}
+                className={`group hover:shadow-[0_24px_48px_rgba(8,145,178,0.24)] transition-all duration-500 hover-lift card-hover border border-cyan-300/20 bg-slate-900/55 backdrop-blur-xl ${index < 1 ? "animate-bounce-in" : ""} overflow-hidden relative`}
               >
                 {/* Card Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
