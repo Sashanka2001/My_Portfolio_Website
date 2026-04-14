@@ -434,11 +434,11 @@ export default function ProjectsPage() {
   const displayedProjects = showAllProjects ? filteredProjects : filteredProjects.slice(0, 6)
 
   const bgColors = [
-    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-indigo-900/30 border border-indigo-200/10",
-    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-orange-900/30 border border-orange-200/10",
-    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-cyan-900/30 border border-cyan-200/10",
-    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-lime-900/30 border border-lime-200/10",
-    "bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-rose-900/30 border border-rose-200/10",
+    "bg-slate-900/55 border border-indigo-300/20 backdrop-blur-xl",
+    "bg-slate-900/55 border border-orange-300/20 backdrop-blur-xl",
+    "bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl",
+    "bg-slate-900/55 border border-lime-300/20 backdrop-blur-xl",
+    "bg-slate-900/55 border border-rose-300/20 backdrop-blur-xl",
   ]
 
   const hoverGlowColors = [
@@ -505,7 +505,7 @@ export default function ProjectsPage() {
             {displayedProjects.map((project, index) => (
               <Card
                 key={project.id}
-                className={`group relative overflow-hidden transition-all duration-300 rounded-xl border-0
+                className={`group relative overflow-hidden transition-all duration-300 rounded-xl
                 ${bgColors[index % bgColors.length]}
                 hover:shadow-xl
               `}
