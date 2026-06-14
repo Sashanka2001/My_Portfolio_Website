@@ -136,7 +136,8 @@ export default function SkillsSection() {
     ],
 
     "Mobile Development": [
-       "Flutter (Learning)"
+       "Flutter (Learning)",
+       "Kotlin"
     ],
 
     "Programming Languages": [
