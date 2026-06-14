@@ -28,8 +28,22 @@ export default function ProjectsSection() {
   }, [])
 
   const featuredProjects = [
-      {
+     {
       id: 1,
+      title: "Penny-Pilot – Smart Personal Finance Management Mobile Application",
+      description: "A mobile application for managing personal finances, tracking expenses, and providing financial insights",
+      longDescription: "Why I Built This: I developed Penny-Pilot to address the common challenges individuals face in managing their personal finances. The app provides users with tools to track their expenses, set budgets, and gain insights into their spending habits. By leveraging modern mobile technologies, I aimed to create an intuitive and user-friendly experience that empowers users to make informed financial decisions and achieve their financial goals.",
+      technologies: ["Kotlin", "Firebase", "Jetpack Compose", "Model-view-viewmodel (MVVM)", "Room Database"],
+      image: "penny_pilot.jpg",
+      category: "Full Stack",
+      year: "2026",
+      demo: "#",
+      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/",
+      github: "https://github.com/it23392830/personal-finance-manager-app.git",
+    },
+    
+      {
+      id: 2,
       title: "SafeLanka - Disaster Management Platform ☔",
       description: "A comprehensive disaster management platform for real-time monitoring and response coordination",
       longDescription: "Why I Built This: I developed SafeLanka to address the critical need for effective disaster management in Sri Lanka. The platform provides real-time monitoring of natural disasters, facilitates communication between emergency responders and affected communities, and offers resources for disaster preparedness. This project was motivated by the increasing frequency of natural disasters and the importance of leveraging technology to enhance response efforts and save lives.",
@@ -41,7 +55,7 @@ export default function ProjectsSection() {
       github: "https://github.com/ravindu422/Heapified_Devthon_3.0",
     },
     {
-      id: 2,
+      id: 3,
       title: "Sherine Travels & Tours 🚗",
       description: "Collaborative vehicle rental management system ",
       longDescription: "Why I Built This: This was a group project where we developed a complete apartment management system using Node.js, React, and Azure for deployment. I contributed to the notification system, dashboard design, and CI/CD deployment setup. The system supports real-time booking updates, user notifications, and role-based dashboards for efficient management.",
@@ -50,18 +64,6 @@ export default function ProjectsSection() {
       demo: "https://youtu.be/Nw75febT4yo?si=KQo9cFC-uj_yXDt1",
       image: "sherine_dashboard.png",
       category: "Full Stack",
-      year: "2025",
-    },
-    {
-      id: 3,
-      title: "NEMRA Smart Apartment 🏙️",
-      description:
-        "Collaborative apartment management system with real-time updates.",
-      technologies: ["React(TypeScript)", "PostgreSQL", "SpringBoot", "Paypal Integration", "Jira", "Figma"],
-      github:
-        "https://github.com/SLIIT-FacultyOfComputing/se-group-project-group_12_nemra-apartment_management_system.git",
-      demo: "#",
-      image: "/nemra.png?height=300&width=500",
       year: "2025",
     },
   ]
