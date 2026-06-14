@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { useState, useEffect, useRef } from "react"
 import { Github, ExternalLink, Code2 } from "lucide-react"
 import Link from "next/link"
+import { title } from "process"
 
 export default function ProjectsPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -119,6 +120,33 @@ export default function ProjectsPage() {
   }
 
   const projects = [
+    {
+      id: 25,
+      title: "Penny-Pilot – Smart Personal Finance Management Mobile Application",
+      description: "A mobile application for managing personal finances, tracking expenses, and providing financial insights",
+      longDescription: "Why I Built This: I developed Penny-Pilot to address the common challenges individuals face in managing their personal finances. The app provides users with tools to track their expenses, set budgets, and gain insights into their spending habits. By leveraging modern mobile technologies, I aimed to create an intuitive and user-friendly experience that empowers users to make informed financial decisions and achieve their financial goals.",
+      technologies: ["Kotlin", "Firebase", "Jetpack Compose", "Model-view-viewmodel (MVVM)", "Room Database"],
+      image: "penny_pilot.jpg",
+      category: "Full Stack",
+      year: "2026",
+      demo: "#",
+      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/",
+      github: "https://github.com/it23392830/personal-finance-manager-app.git",
+    },
+
+    {
+      id: 24,
+      title: "A Hybrid Explainable AI (XAI) Framework for ICU Risk Prediction Integrating Rule-Based Reasoning and Machine Learning for Enhanced Clinical Decision Support",
+      description: "A research project focused on developing a hybrid Explainable AI framework for ICU risk prediction, combining rule-based reasoning and machine learning techniques to enhance clinical decision support.",
+      longDescription: "Why I Built This: The motivation behind this research project was to address the critical need for accurate and interpretable risk prediction in Intensive Care Units (ICUs). By integrating rule-based reasoning with machine learning, we aimed to create a hybrid Explainable AI (XAI) framework that not only provides reliable predictions but also offers insights into the decision-making process. This approach is intended to support clinicians in making informed decisions, ultimately improving patient outcomes and enhancing the overall quality of care in critical care settings.",
+      technologies: ["Machine Learning", "Rule-Based Reasoning", "Explainable AI (XAI)"],
+      image: "hybrid_xai_icu_poster.png",
+      category: "Research",
+      year: 2026,
+      demo: "#",
+      pdf: "https://www.linkedin.com/in/sashanka-rathnayaka-5761ab267/details/projects/",
+    },
+
     {
       id: 23,
       title: "SafeLanka - Disaster Management Platform ☔",
