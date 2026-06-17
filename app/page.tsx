@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Navigation from "@/components/navigation"
 import HeroSection from "@/components/hero-section"
 import AboutSection from "@/components/about-section"
-import SkillsSection from "@/components/skills-section"
+import SkillsGlobe from "@/components/skills-globe"
 import ProjectsSection from "@/components/projects-section"
 import ExperienceSection from "@/components/experience-section"
 import EducationSection from "@/components/education-section"
@@ -57,7 +57,7 @@ export default function HomePage() {
       />
       <HeroSection scrollToSection={scrollToSection} />
       <AboutSection />
-      <SkillsSection />
+      <SkillsGlobe />
       <ProjectsSection />
       <ExperienceSection />
       <EducationSection />
