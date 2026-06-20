@@ -110,7 +110,7 @@ export default function AboutPage() {
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: "21+ Projects",
+      title: "25+ Projects",
       description: "Completed various web development projects",
     },
     {
@@ -325,14 +325,14 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-slate-100 mb-6">My Story</h3>
                 <div className="space-y-4 text-slate-300 leading-relaxed">
                   <p>
-                    Hello! I'm Sashanka Rathnayaka, a 3rd year Computer Science undergraduate at SLIIT with a passion
+                    Hello! I'm Sashanka Rathnayaka, a 4th year Computer Science undergraduate at SLIIT with a passion
                     for building impactful digital solutions. My journey began with a curiosity about how software
                     works, which soon grew into hands-on experience in full-stack web development, distributed systems,
                     and human-computer interaction.
                   </p>
                   <p>
                     I specialize in technologies like <b>React, Next.js, Node.js(Express), Vue.js, Spring Boot and SQL</b> and have
-                    also explored lower-level programming using C, Fortran, and Lex/Yacc. My academic and project work
+                    also explored lower-level programming using C and java. My academic and project work
                     spans <b>Web Development, IoT-based applications, UI/UX design, compiler construction, and game development.</b> I'm
                     familiar with tools like Figma, Jira, and methodologies such as Agile and Scrum.
                   </p>
