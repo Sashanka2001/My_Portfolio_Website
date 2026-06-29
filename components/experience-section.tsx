@@ -107,18 +107,34 @@ export default function ExperienceSection() {
       title: "Full Stack Engineer - Intern",
       organization: "Ministry of Finance - Information Technology Management Department (ITMD)",
       description: "Internship · Colombo, Western Province, Sri Lanka · On-site",
-      details: "Working as a Software Engineer Intern, developing and maintaining web applications using modern technologies. Contributing to full-stack development projects and gaining hands-on experience in professional software development practices. Key responsibilities include: Front End Software Development, Back End Software Development, Full Stack Software Development, Web Development, and Database Administration.",
-      skills: ["Vue.js", "SQL", "Spring Boot"],
+      details: [
+        "Successfully contributed to the development and launch of the 'Building Module' of the Government Non-Financial Asset Management System for the Comptroller General's Office (CGO). The External Building Section was successfully launched nationwide in Sri Lanka on 18 June 2026, followed by the successful launch of the Internal Dashboard for the Comptroller General's Office on 23 June 2026",
+        <>
+          Currently working on the 'Land Module' of the Government Non-Financial
+          Asset Management System, contributing to the development of features
+          for managing government land asset details and related records.
+          <br />
+          Project:{" "}
+          <a
+            href="https://systems.treasury.gov.lk/cgo/#/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-teal-300 underline underline-offset-4 hover:text-teal-200 transition-colors"
+          >
+            Government Non-Financial Asset Management System
+          </a>
+          .
+        </>,
+      ],
       year: "2026 Jan - Present",
       type: "Internship",
     },
     {
       id: 2,
-      title: "Computer Science Student",
+      title: "Computer Science Undergraduate",
       organization: "SLIIT",
       description: "Currently pursuing Bachelor's degree in Computer Science",
       details: "Actively learning and applying computer science principles through coursework and personal projects. Focus areas include software development, algorithms, data structures, and web technologies.",
-      skills: ["Academic Projects", "Team Collaboration", "Problem Solving", "Researches"],
       year: "2023 July - Present",
       type: "Education",
     },
@@ -199,21 +215,15 @@ export default function ExperienceSection() {
                   <p className="text-sm text-slate-300 mb-4">
                     {experience.description}
                   </p>
-                  <p className="text-sm text-slate-300 mb-6 leading-relaxed">
-                    {experience.details}
-                  </p>
-
-                  {/* Skills Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {experience.skills.map((skill, skillIndex) => (
-                      <span
-                        key={skillIndex}
-                        className="px-3 py-2 bg-slate-800/70 text-slate-200 text-sm rounded-xl border border-slate-500/35 font-medium hover:scale-105 transition-transform duration-200 animate-fade-in-up backdrop-blur-sm"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                  <ul className="text-sm text-slate-300 mb-6 leading-relaxed space-y-3 list-disc pl-5">
+                    {Array.isArray(experience.details) ? (
+                      experience.details.map((detail, detailIndex) => (
+                        <li key={detailIndex}>{detail}</li>
+                      ))
+                    ) : (
+                      <li>{experience.details}</li>
+                    )}
+                  </ul>
 
                   {/* Hover Overlay */}
                   <div
