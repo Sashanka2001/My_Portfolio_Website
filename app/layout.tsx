@@ -44,6 +44,9 @@ export const metadata: Metadata = {
   description: "Explore the portfolio of Sashanka Rathnayaka, an Intern Full Stack Software Engineer and Computer Science student based in Colombo, Sri Lanka. Check out my software engineering projects and technical skills.",
   generator: "v0.dev",
   metadataBase: new URL("https://www.sashanka-rathnayaka.tech"),
+  verification: {
+    google: "pLTaxWAicX-7delcGY8qgy_FREdGKEvgPaFcq2Gun-0",
+  },
   alternates: {
     canonical: "/",
   },
