@@ -65,6 +65,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`w-7 h-7 rounded-full bg-slate-600/50 flex items-center justify-center text-slate-300 transition-all duration-300 ${social.color} ${social.bgColor}`}
+                        aria-label={social.name}
                       >
                         <IconComponent className="w-3 h-3" />
                       </Link>

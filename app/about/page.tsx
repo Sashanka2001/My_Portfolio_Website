@@ -263,7 +263,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
-            <h3 className="text-4xl md:text-6xl font-bold text-slate-100 gradient-text mb-4">About Me</h3>
+            <h1 className="text-4xl md:text-6xl font-bold text-slate-100 gradient-text mb-4">About Sashanka Rathnayaka</h1>
             <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in"></div>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Passionate Computer Science student with a love for creating innovative solutions through code.
@@ -279,7 +279,7 @@ export default function AboutPage() {
                 <div className="w-56 mx-auto bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center text-white text-6xl font-bold mb-6 overflow-hidden">
                   <img
                     src="Prof.png"
-                    alt="Professional portrait"
+                    alt="Sashanka Rathnayaka - Intern Full Stack Software Engineer"
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
@@ -303,14 +303,14 @@ export default function AboutPage() {
 
               {/* Achievements */}
               <div className="bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl rounded-2xl p-8 shadow-[0_30px_90px_rgba(0,0,0,0.5)]">
-                <h3 className="text-xl font-bold text-slate-100 mb-6">Achievements</h3>
+                <h2 className="text-xl font-bold text-slate-100 mb-6">Achievements</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {achievements.map((achievement, index) => (
                     <div key={index} className="text-center">
                       <div className="w-12 h-12 bg-teal-500/20 border border-teal-300/20 rounded-full flex items-center justify-center text-teal-200 mx-auto mb-2">
                         {achievement.icon}
                       </div>
-                      <h4 className="font-semibold text-slate-100 text-sm">{achievement.title}</h4>
+                      <h3 className="font-semibold text-slate-100 text-sm">{achievement.title}</h3>
                       <p className="text-xs text-slate-300 mt-1">{achievement.description}</p>
                     </div>
                   ))}
@@ -322,7 +322,7 @@ export default function AboutPage() {
             <div className={`space-y-8 transition-all duration-1000 ${isVisible ? "animate-fade-in-right animate-delay-300" : "opacity-0"}`}>
               {/* My Story */}
               <div className="bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl rounded-2xl p-8 shadow-[0_30px_90px_rgba(0,0,0,0.5)]">
-                <h3 className="text-2xl font-bold text-slate-100 mb-6">My Story</h3>
+                <h2 className="text-2xl font-bold text-slate-100 mb-6">My Story</h2>
                 <div className="space-y-4 text-slate-300 leading-relaxed">
                   <p>
                     Hello! I'm Sashanka Rathnayaka, a 4th year Computer Science undergraduate at SLIIT with a passion
@@ -348,29 +348,29 @@ export default function AboutPage() {
               {/* Enhanced Skills Overview */}
               <Card className="bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl shadow-[0_30px_90px_rgba(0,0,0,0.5)] hover:shadow-[0_35px_100px_rgba(0,0,0,0.55)] transition-all duration-300">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-slate-100 mb-6 flex items-center gap-2">
+                  <h2 className="text-2xl font-bold text-slate-100 mb-6 flex items-center gap-2">
                     <Code className="w-6 h-6 text-blue-300" />
                     Core Competencies
-                  </h3>
+                  </h2>
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center p-4 rounded-lg border border-blue-200/15 bg-blue-900/20 hover:bg-blue-900/30 transition-colors">
                       <Code className="w-8 h-8 mx-auto mb-2 text-blue-300" />
-                      <h4 className="font-semibold text-slate-100 mb-1">Frontend</h4>
+                      <h3 className="font-semibold text-slate-100 mb-1">Frontend</h3>
                       <p className="text-sm text-slate-300">React, Next.js, Vue.js</p>
                     </div>
                     <div className="text-center p-4 rounded-lg border border-green-200/15 bg-green-900/20 hover:bg-green-900/30 transition-colors">
                       <Database className="w-8 h-8 mx-auto mb-2 text-green-300" />
-                      <h4 className="font-semibold text-slate-100 mb-1">Backend</h4>
+                      <h3 className="font-semibold text-slate-100 mb-1">Backend</h3>
                       <p className="text-sm text-slate-300">Spring Booot, Node.js(Express), .NET</p>
                     </div>
                     <div className="text-center p-4 rounded-lg border border-purple-200/15 bg-purple-900/20 hover:bg-purple-900/30 transition-colors">
                       <Globe className="w-8 h-8 mx-auto mb-2 text-purple-300" />
-                      <h4 className="font-semibold text-slate-100 mb-1">Database</h4>
+                      <h3 className="font-semibold text-slate-100 mb-1">Database</h3>
                       <p className="text-sm text-slate-300">SQL, PostgreSQL, MongoDB, Firebase</p>
                     </div>
                     <div className="text-center p-4 rounded-lg border border-orange-200/15 bg-orange-900/20 hover:bg-orange-900/30 transition-colors">
                       <Smartphone className="w-8 h-8 mx-auto mb-2 text-orange-300" />
-                      <h4 className="font-semibold text-slate-100 mb-1">Programming Languages</h4>
+                      <h3 className="font-semibold text-slate-100 mb-1">Programming Languages</h3>
                       <p className="text-sm text-slate-300"> Java, C, Javascript, Typescript, Python </p>
                     </div>
                   </div>
@@ -382,7 +382,7 @@ export default function AboutPage() {
 
           {/* Certificates Section - Show 3 initially with expand option */}
           <div className="bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl rounded-3xl p-12 shadow-[0_30px_90px_rgba(0,0,0,0.5)] mb-20">
-            <h3 className="text-3xl font-bold text-slate-100 mb-8 text-center">Licenses & Certifications</h3>
+            <h2 className="text-3xl font-bold text-slate-100 mb-8 text-center">Licenses & Certifications</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {displayedCertificates.map((cert, index) => (
                 <Card key={index} className="border border-cyan-300/20 bg-slate-900/55 backdrop-blur-xl hover:shadow-[0_24px_48px_rgba(8,145,178,0.2)] transition-all duration-300 hover:-translate-y-1">
@@ -391,7 +391,7 @@ export default function AboutPage() {
                        
                       <span className="text-xs bg-slate-800/85 text-slate-200 px-2 py-1 rounded-full border border-slate-600/40">{cert.year}</span>
                     </div>
-                    <h4 className="font-semibold text-slate-100 mb-2 text-sm leading-tight">{cert.name}</h4>
+                    <h3 className="font-semibold text-slate-100 mb-2 text-sm leading-tight">{cert.name}</h3>
                     <p className="text-xs text-slate-300 mb-3">{cert.organization}</p>
 
                     {/* Skills Tags */}

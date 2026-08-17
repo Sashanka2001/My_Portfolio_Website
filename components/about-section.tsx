@@ -182,27 +182,27 @@ export default function AboutSection() {
               <CardContent className="p-8">
                 <div className="mb-6">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-slate-100 mb-2">Hello I'm Sashanka</h3>
+                    <h3 className="text-2xl font-bold text-slate-100 mb-1">Hello, I'm Sashanka Rathnayaka</h3>
+                    <p className="text-sm text-teal-400 font-semibold mb-1">Intern - Full Stack Software Engineer | Computer Science Student</p>
+                    <p className="text-xs text-slate-400 mb-4">Based in Colombo, Sri Lanka</p>
                     <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4 animate-scale-in"></div>
                   </div>
                 </div>
 
                 <div className="space-y-4 text-slate-300 leading-relaxed">
                   <p className="animate-fade-in-up animate-delay-400">
-                    I'm a dedicated Computer Science student with a passion for technology and problem-solving. My
-                    journey in programming started with curiosity and has evolved into a deep commitment to creating
-                    meaningful software solutions.
+                    I am a Computer Science student and Intern Full Stack Software Engineer based in Colombo, Sri Lanka. 
+                    I specialize in frontend and backend development, building clean, performant, and user-centric web applications.
+                    This portfolio showcases my professional projects, academic work, and core competencies in software development.
                   </p>
                   <p className="animate-fade-in-up animate-delay-500">
-                    I enjoy working on both <b>front-end and back-end development</b> with experience in modern web
-                    technologies. I'm always eager to learn new technologies and take on challenging projects that push
-                    my boundaries.
+                    With hands-on experience in <b>React, Next.js, Node.js, Spring Boot, and SQL databases</b>, I focus on building robust, scalable, and responsive digital solutions. Explore my projects and experience to see how I translate complex requirements into elegant, working code.
                   </p>
                 </div>
 
                 <Link href="/about" className="inline-block mt-6">
                   <Button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 hover-lift btn-ripple animate-glow group">
-                    Learn More About Me
+                    Learn more about Sashanka Rathnayaka
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>

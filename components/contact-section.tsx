@@ -147,7 +147,7 @@ export default function ContactSection() {
       id: 5,
       name: "Email",
       icon: Mail,
-      href: "mailto:chamudisashanka01@gmail.com.com",
+      href: "mailto:chamudisashanka01@gmail.com",
       description: "Send me a message",
       color:
         "bg-rose-900/25 text-rose-100 border-rose-300/20 hover:bg-rose-900/35",

@@ -206,9 +206,9 @@ export default function ExperienceSection() {
                     </span>
                   </div>
 
-                  <h4 className="font-bold text-slate-100 mb-3 text-xl leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-100 group-hover:to-slate-300 transition-all duration-300">
+                  <h3 className="font-bold text-slate-100 mb-3 text-xl leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-100 group-hover:to-slate-300 transition-all duration-300">
                     {experience.title}
-                  </h4>
+                  </h3>
                   <p className="text-sm text-slate-200 mb-3 font-semibold">
                     {experience.organization}
                   </p>

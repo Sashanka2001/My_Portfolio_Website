@@ -120,9 +120,9 @@ export default function EducationSection() {
                     </span>
                   </div>
 
-                  <h4 className="font-bold text-slate-100 mb-3 text-xl leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-100 group-hover:to-slate-300 transition-all duration-300">
+                  <h3 className="font-bold text-slate-100 mb-3 text-xl leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-100 group-hover:to-slate-300 transition-all duration-300">
                     {edu.degree}
-                  </h4>
+                  </h3>
                   <p className="text-sm text-slate-200 mb-3 font-semibold">{edu.institution}</p>
 
                   {edu.expectedGraduation ? (
@@ -143,9 +143,9 @@ export default function EducationSection() {
 
                   {edu.coreSubjects && (
                     <div className="mb-4">
-                      <h5 className="font-semibold text-slate-100 mb-3 text-sm">
+                      <h4 className="font-semibold text-slate-100 mb-3 text-sm">
                         {edu.type === "University" ? "Core Subjects" : "Subjects"}
-                      </h5>
+                      </h4>
                       <div className="flex flex-wrap gap-2">
                         {edu.coreSubjects.map((subject, subjectIndex) => (
                           <span

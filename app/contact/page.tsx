@@ -146,7 +146,7 @@ export default function ContactPage() {
             className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-slate-100 gradient-text mb-4">
-              Let's Connect
+              Contact Sashanka Rathnayaka
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-teal-500 to-blue-500 mx-auto mb-6 animate-scale-in"></div>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -175,9 +175,9 @@ export default function ContactPage() {
             >
               {/* Contact Details - Certificate Style */}
               <div className="bg-slate-900/55 border border-cyan-300/20 backdrop-blur-xl rounded-3xl p-8 shadow-[0_30px_90px_rgba(0,0,0,0.5)] hover:shadow-[0_35px_100px_rgba(0,0,0,0.55)] transition-all duration-500 hover-lift card-hover">
-                <h3 className="text-2xl font-bold text-slate-100 mb-6 text-center gradient-text">
+                <h2 className="text-2xl font-bold text-slate-100 mb-6 text-center gradient-text">
                   Contact Information
-                </h3>
+                </h2>
                 <div className="grid gap-4">
                   {contactInfo.map((info, index) => {
                     const IconComponent = info.icon
@@ -192,7 +192,7 @@ export default function ContactPage() {
                               <IconComponent className="w-6 h-6" />
                             </div>
                             <div className="flex-1">
-                              <h4 className="font-semibold text-slate-100 text-sm">{info.title}</h4>
+                              <h3 className="font-semibold text-slate-100 text-sm">{info.title}</h3>
                               <a
                                 href={info.link}
                                 className="text-slate-300 hover:text-teal-300 transition-colors text-xs"
@@ -216,9 +216,9 @@ export default function ContactPage() {
                       <User className="w-6 h-6 text-teal-200" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-slate-100 mb-2 gradient-text">
+                      <h2 className="text-xl font-bold text-slate-100 mb-2 gradient-text">
                         Currently Available
-                      </h3>
+                      </h2>
                       <p className="text-slate-300 mb-4">
                          Currently working as a Software Engineer Intern while actively seeking freelance projects and collaboration opportunities. 
                          I'd love to discuss how I can contribute to your project!

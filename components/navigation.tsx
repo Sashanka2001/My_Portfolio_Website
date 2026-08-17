@@ -32,7 +32,9 @@ export default function Navigation({ activeSection, isMenuOpen, setIsMenuOpen, s
           {/* Logo/Brand */}
           <Link
             href="/"
-            className="flex items-center gap-3 text-xl font-bold text-white tracking-wide hover:text-teal-400 transition-all duration-300 group">
+            className="flex items-center gap-3 text-xl font-bold text-white tracking-wide hover:text-teal-400 transition-all duration-300 group"
+          >
+            Sashanka Rathnayaka
           </Link>
 
           {/* Desktop Navigation */}
@@ -62,6 +64,7 @@ export default function Navigation({ activeSection, isMenuOpen, setIsMenuOpen, s
           <button
             className="md:hidden p-2 rounded-full bg-slate-700/50 text-white hover:bg-slate-600/50 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Navigation Menu"
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>

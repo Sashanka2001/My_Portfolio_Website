@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /footer-demo
+
+Sitemap: https://www.sashanka-rathnayaka.tech/sitemap.xml

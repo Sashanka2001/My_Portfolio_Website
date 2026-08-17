@@ -210,7 +210,7 @@ export default function ProjectsSection() {
             <Button
               className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-400 hover:to-blue-400 text-slate-950 px-8 py-4 rounded-2xl font-semibold tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 hover-lift btn-ripple animate-glow group"
             >
-              View All Projects
+              Explore Sashanka Rathnayaka's projects
             </Button>
           </Link>
 

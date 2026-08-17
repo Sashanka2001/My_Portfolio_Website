@@ -500,9 +500,9 @@ export default function ProjectsPage() {
             isVisible ? "opacity-100" : "opacity-0 translate-y-6"
           }`}
         >
-          <h3 className="text-4xl md:text-6xl font-bold text-slate-100 bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-4">
-            My Projects
-          </h3>
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-100 bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-4">
+            Sashanka Rathnayaka's Projects
+          </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-600 mx-auto mb-6 origin-left scale-x-100 transition-transform duration-700"></div>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             A collection of projects I've worked on, showcasing my skills in web development, full-stack
@@ -563,9 +563,9 @@ export default function ProjectsPage() {
                     />
                   </div>
 
-                  <h4 className="font-semibold text-slate-100 mb-2 text-sm leading-tight">
+                  <h2 className="font-semibold text-slate-100 mb-2 text-sm leading-tight">
                     {project.title}
-                  </h4>
+                  </h2>
                   <p className="text-xs text-slate-300 mb-3">{project.description}</p>
 
                   {/* Technologies Tags */}

@@ -255,7 +255,8 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
           .panel { flex: none !important; min-height: 45svh; padding: 44px 28px;
                    align-items: center !important; text-align: center !important; }
           .panel-coder .panel-desc { text-align: center; }
-          .divider, .name-badge, .shape-ring, .shape-ring-2 { display: none; }
+          .divider, .shape-ring, .shape-ring-2 { display: none; }
+          .name-badge { display: block; bottom: 16px; }
         }
       `}</style>
       <section id="home" className="hero-root">
@@ -326,6 +327,10 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
               </button>
             </div>
           </div>
+        </div>
+        {/* NAME BADGE (H1 FOR SEO) */}
+        <div className="name-badge">
+          <h1 className="name-badge-inner">Sashanka Rathnayaka</h1>
         </div>
       </section>
     </>
