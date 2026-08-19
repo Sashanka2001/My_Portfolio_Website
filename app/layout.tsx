@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 
 const jsonLd = {
@@ -106,6 +107,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-foreground transition-colors duration-300">
         {children}
+        <Analytics />
       </body>
     </html>
   );
