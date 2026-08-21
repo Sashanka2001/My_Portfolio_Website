@@ -28,14 +28,7 @@ export default function Navigation({ activeSection, isMenuOpen, setIsMenuOpen, s
   return (
     <nav className="fixed top-0 w-full bg-gradient-to-r from-slate-900/95 to-slate-800/95 backdrop-blur-md z-50 border-b border-slate-700/50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo/Brand */}
-          <Link
-            href="/"
-            className="flex items-center gap-3 text-xl font-bold text-white tracking-wide hover:text-teal-400 transition-all duration-300 group"
-          >
-            Sashanka Rathnayaka
-          </Link>
+        <div className="flex justify-end items-center py-4">
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-2">

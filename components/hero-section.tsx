@@ -328,10 +328,6 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
             </div>
           </div>
         </div>
-        {/* NAME BADGE (H1 FOR SEO) */}
-        <div className="name-badge">
-          <h1 className="name-badge-inner">Sashanka Rathnayaka</h1>
-        </div>
       </section>
     </>
   )
